@@ -118,7 +118,7 @@ section{padding:86px 0;border-top:1px solid #FFFFFF12}
 .skill span{font-size:11px;color:#8E9AAA;line-height:1.5}
 .skill svg{color:var(--site-primary);width:24px;height:24px}
 
-/* TIMELINE (EDUCATION, CERTIFICATIONS, EXPERIENCE, RESEARCH) */
+/* TIMELINE */
 .timeline{position:relative;margin-left:8px;padding-left:26px;border-left:1px solid #FFFFFF20;display:grid;gap:18px}
 .time-item{position:relative;display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px;background:#111720;border:1px solid #FFFFFF12;border-radius:17px;transition:all .25s;}
 .time-item:hover{transform:translateX(6px);border-color:#A3F7BF66;background:#131B26}
@@ -136,7 +136,7 @@ section{padding:86px 0;border-top:1px solid #FFFFFF12}
 .cert-card h3{font-size:16px;margin:10px 0 6px;letter-spacing:-.03em;}
 .cert-org{font-size:11px;color:#8B98AA;line-height:1.5;}
 
-/* HYBRID 3D PROJECT TILES (SCREENSHOT + INTERACTIVE CONTROLS) */
+/* HYBRID 3D PROJECT TILES */
 .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
 .project{border:1px solid #FFFFFF17;border-radius:22px;overflow:hidden;background:#111720;transform-style:preserve-3d;perspective:900px;transition:border-color .3s, box-shadow .3s;position:relative;isolation:isolate}
 .project:before{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:radial-gradient(420px circle at var(--spot-x,50%) var(--spot-y,50%),rgba(163,247,191,0.18),transparent 65%);opacity:0;transition:opacity .3s;}
@@ -177,7 +177,7 @@ section{padding:86px 0;border-top:1px solid #FFFFFF12}
 .contact-panel{background:linear-gradient(125deg,#15241E,#141B2B 70%);border:1px solid #A3F7BF32;border-radius:26px;padding:clamp(26px,5vw,54px);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
 .contact-panel h2{font-size:clamp(32px,5vw,58px);letter-spacing:-.06em;line-height:1;margin:12px 0}
 .contact-panel p{color:#AEB9C5;font-size:13px;line-height:1.7;max-width:520px;margin:0}
-.contact-buttons{display:flex;flex-direction:column;gap:10px;min-width:180px}
+.contact-buttons{display:flex;flex-direction:column;gap:10px;min-width:200px}
 .contact-buttons a{text-align:center}
 .contact-note{font-size:10px;color:#798697;margin-top:18px}
 footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;color:#6F7A89;font-size:10px}
@@ -228,7 +228,7 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <!-- LIVE TELEMETRY HUD -->
 <div class="live-hud">
   <div class="wrap hud-flex">
-    <div class="hud-indicator"><span class="hud-pulse"></span> PRIMARY FOCUS: ACCOUNTING & FINANCE[cite: 14]</div>
+    <div class="hud-indicator"><span class="hud-pulse"></span> PRIMARY FOCUS: ACCOUNTING & FINANCE</div>
     <div>INTERACTION SCORE: <strong id="hudScore" style="color:var(--site-primary)">0 PTS</strong></div>
     <div>ACTIVE ACCENT: <span id="hudAccent" style="color:var(--site-primary)">MINT (#A3F7BF)</span></div>
   </div>
@@ -248,21 +248,21 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
       <a href="#interests">Interests</a>
       <a href="#contact">Contact</a>
     </nav>
-    <a class="nav-cta" href="#contact">LET'S CONNECT ↗[cite: 14]</a>
+    <a class="nav-cta" href="#contact">LET'S CONNECT ↗</a>
     <button class="menu" id="menu" aria-label="Toggle navigation">☰</button>
   </div>
 </header>
 
 <div class="marquee-container" id="marqueeBar">
   <div class="marquee-track" id="marqueeTrack">
-    <div class="marquee-item"><span>01</span> M.COM ACCOUNTING & FINANCE[cite: 14]</div>
-    <div class="marquee-item"><span>02</span> CMA INTERMEDIATE (GROUP I COMPLETED)[cite: 14]</div>
-    <div class="marquee-item"><span>03</span> FINANCIAL STATEMENT & RATIO ANALYSIS[cite: 14]</div>
-    <div class="marquee-item"><span>04</span> EXCEL & TALLY PRIME REPORTING[cite: 14]</div>
-    <div class="marquee-item"><span>05</span> AI-ASSISTED WEB APP ENGINEERING[cite: 14]</div>
-    <div class="marquee-item"><span>06</span> EMPIRICAL BANKING RESEARCH PUBLICATION[cite: 14]</div>
-    <div class="marquee-item"><span>01</span> M.COM ACCOUNTING & FINANCE[cite: 14]</div>
-    <div class="marquee-item"><span>02</span> CMA INTERMEDIATE (GROUP I COMPLETED)[cite: 14]</div>
+    <div class="marquee-item"><span>01</span> M.COM ACCOUNTING & FINANCE</div>
+    <div class="marquee-item"><span>02</span> CMA INTERMEDIATE (GROUP I COMPLETED)</div>
+    <div class="marquee-item"><span>03</span> FINANCIAL STATEMENT & RATIO ANALYSIS</div>
+    <div class="marquee-item"><span>04</span> EXCEL & TALLY PRIME REPORTING</div>
+    <div class="marquee-item"><span>05</span> AI-ASSISTED WEB APP ENGINEERING</div>
+    <div class="marquee-item"><span>06</span> EMPIRICAL BANKING RESEARCH PUBLICATION</div>
+    <div class="marquee-item"><span>01</span> M.COM ACCOUNTING & FINANCE</div>
+    <div class="marquee-item"><span>02</span> CMA INTERMEDIATE (GROUP I COMPLETED)</div>
   </div>
 </div>
 
@@ -270,16 +270,16 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <!-- HERO SECTION -->
 <section class="hero wrap" id="home" style="border-top:0">
   <div class="hero-copy">
-    <div class="eyebrow"><span class="pulse"></span> ACCOUNTING & FINANCE | FINANCIAL ANALYSIS | AI-ASSISTED DIGITAL BUILDING[cite: 14]</div>
+    <div class="eyebrow"><span class="pulse"></span> ACCOUNTING & FINANCE | FINANCIAL ANALYSIS | AI-ASSISTED DIGITAL BUILDING</div>
     <h1>Akash<br><span class="outline">Gokulakrishnan.</span></h1>
-    <p>Commerce postgraduate specializing in Accounting and Finance and pursuing CMA Intermediate[cite: 14]. Skilled in financial statement analysis, ratio analysis, and Excel-based reporting with hands-on exposure to Tally Prime[cite: 14], complemented by practical experience in AI-assisted website and web application development[cite: 14].</p>
+    <p>Commerce postgraduate specializing in Accounting and Finance and pursuing CMA Intermediate. Skilled in financial statement analysis, ratio analysis, and Excel-based reporting with hands-on exposure to Tally Prime, complemented by practical experience in AI-assisted website and web application development.</p>
     <div class="actions">
       <a class="btn primary" href="#about">Explore Portfolio ↘</a>
-      <a class="btn" href="#education">View Qualifications ↗[cite: 14]</a>
+      <a class="btn" href="#education">View Qualifications ↗</a>
     </div>
     <div class="meta-line">
-      <span><i></i> M.Com (Accounting & Finance) — 82.18%[cite: 14]</span>
-      <span><i></i> CMA Intermediate (Group I Completed)[cite: 14]</span>
+      <span><i></i> M.Com (Accounting & Finance) — 82.18%</span>
+      <span><i></i> CMA Intermediate (Group I Completed)</span>
     </div>
   </div>
 
@@ -292,8 +292,8 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
       <div class="monogram">AG.</div>
       <div class="core-bottom">FINANCE MINDED.<br>TECHNOLOGY CURIOUS.<br>BUILT WITH PURPOSE.</div>
     </div>
-    <div class="float-tag tag-a" id="badgeA"><strong>01 / CORE FINANCE[cite: 14]</strong>Statements · Ratios · CMA Inter[cite: 14]</div>
-    <div class="float-tag tag-b" id="badgeB"><strong>02 / COMPLEMENTARY BUILD[cite: 14]</strong>AI-Assisted Web Apps[cite: 14]</div>
+    <div class="float-tag tag-a" id="badgeA"><strong>01 / CORE FINANCE</strong>Statements · Ratios · CMA Inter</div>
+    <div class="float-tag tag-b" id="badgeB"><strong>02 / COMPLEMENTARY BUILD</strong>AI-Assisted Web Apps</div>
     <div class="scroll-note">TILT MOUSE / DRAG BADGES ↓</div>
   </div>
 </section>
@@ -302,44 +302,44 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="about">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">01 — PROFILE[cite: 10]</div><h2>About Me.</h2></div>
-      <p>Grounding analytical financial decision-making with practical digital tool exploration[cite: 14].</p>
+      <div><div class="kicker">01 — PROFILE</div><h2>About Me.</h2></div>
+      <p>Grounding analytical financial decision-making with practical digital tool exploration.</p>
     </div>
     <div class="about-grid">
       
       <!-- LEFT PANEL: VERIFIED KPI DASHBOARD -->
       <div class="panel">
-        <div class="small-label">ACADEMIC & BUILD METRICS[cite: 15]</div>
-        <div class="big-stat" style="font-size:42px;margin:8px 0 16px;">F × T[cite: 15]</div>
-        <p class="about-copy">Applying financial rigor to analyze operational efficiency and solve administrative bottlenecks through digital tools[cite: 14, 15].</p>
+        <div class="small-label">ACADEMIC & BUILD METRICS</div>
+        <div class="big-stat" style="font-size:42px;margin:8px 0 16px;">F × T</div>
+        <p class="about-copy">Applying financial rigor to analyze operational efficiency and solve administrative bottlenecks through digital tools.</p>
         
         <div class="kpi-grid">
           <div class="kpi-card" id="kpiMcom">
-            <div class="kpi-num">82.18%[cite: 14, 15]</div>
-            <div class="kpi-title">M.Com Aggregate[cite: 14, 15]</div>
-            <div class="kpi-desc">CGPA 8.2 across semesters at Ramakrishna Mission Vivekananda College[cite: 14, 15]</div>
+            <div class="kpi-num">82.18%</div>
+            <div class="kpi-title">M.Com Aggregate</div>
+            <div class="kpi-desc">CGPA 8.2 across semesters at Ramakrishna Mission Vivekananda College</div>
           </div>
           <div class="kpi-card" id="kpiCma">
-            <div class="kpi-num">Group I[cite: 14, 15]</div>
-            <div class="kpi-title">CMA Intermediate[cite: 14, 15]</div>
-            <div class="kpi-desc">Completed ICAI Group I; Group II currently in progress[cite: 14, 15]</div>
+            <div class="kpi-num">Group I</div>
+            <div class="kpi-title">CMA Intermediate</div>
+            <div class="kpi-desc">Completed ICAI Group I; Group II currently in progress</div>
           </div>
           <div class="kpi-card" id="kpiSystems">
-            <div class="kpi-num">8+ Apps[cite: 14]</div>
-            <div class="kpi-title">Web Applications[cite: 14]</div>
-            <div class="kpi-desc">Deployed using AI-assisted workflows and Google Apps Script[cite: 14]</div>
+            <div class="kpi-num">8+ Apps</div>
+            <div class="kpi-title">Web Applications</div>
+            <div class="kpi-desc">Deployed using AI-assisted workflows and Google Apps Script</div>
           </div>
           <div class="kpi-card" id="kpiPaper">
-            <div class="kpi-num">1 Paper[cite: 14, 15]</div>
-            <div class="kpi-title">Conference Study[cite: 14, 15]</div>
-            <div class="kpi-desc">Primary survey on AI-enabled SBI YONO services published in proceedings[cite: 14, 15]</div>
+            <div class="kpi-num">1 Paper</div>
+            <div class="kpi-title">Conference Study</div>
+            <div class="kpi-desc">Primary survey on AI-enabled SBI YONO services published in proceedings</div>
           </div>
         </div>
 
         <div class="pill-row">
-          <span class="pill">Financial Statement Analysis[cite: 14]</span>
-          <span class="pill">Ratio Analysis[cite: 14]</span>
-          <span class="pill">AI-Assisted Development[cite: 14]</span>
+          <span class="pill">Financial Statement Analysis</span>
+          <span class="pill">Ratio Analysis</span>
+          <span class="pill">AI-Assisted Development</span>
         </div>
       </div>
 
@@ -347,29 +347,29 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
       <div class="panel">
         <div class="exec-card">
           <div>
-            <div class="small-label">EXECUTIVE SUMMARY[cite: 15]</div>
+            <div class="small-label">EXECUTIVE SUMMARY</div>
             <div class="exec-highlight">
-              "Commerce postgraduate specializing in Accounting and Finance, seeking a role in Finance and Accounting Operations to deliver accurate, data-driven financial insights."[cite: 14]
+              "Commerce postgraduate specializing in Accounting and Finance, seeking a role in Finance and Accounting Operations to deliver accurate, data-driven financial insights."
             </div>
             <p class="about-copy">
-              My core academic and professional foundation is firmly rooted in Accounting and Finance[cite: 14]. Supported by CMA Intermediate studies[cite: 14], undergraduate distinction[cite: 14], and empirical banking research[cite: 14], I bring structured analytical thinking to financial statements[cite: 14].
+              My core academic and professional foundation is firmly rooted in Accounting and Finance. Supported by CMA Intermediate studies, undergraduate distinction, and empirical banking research, I bring structured analytical thinking to financial statements.
             </p>
             <p class="about-copy">
-              Alongside finance, I cultivate an active practical interest in developing websites and web applications with the support of AI tools and Google Apps Script[cite: 14], building operational dashboards and tracking systems for departmental and personal workflows[cite: 14].
+              Alongside finance, I cultivate an active practical interest in developing websites and web applications with the support of AI tools and Google Apps Script, building operational dashboards and tracking systems for departmental and personal workflows.
             </p>
           </div>
 
           <div class="exec-actions">
             <button class="exec-btn" id="btnCopySummary">
-              <span>📋 Copy 2-Line Recruiter Summary[cite: 15]</span>
+              <span>📋 Copy 2-Line Recruiter Summary</span>
               <span>→</span>
             </button>
             <a class="exec-btn" href="#education">
-              <span>🎓 View Academic & CMA Credentials[cite: 14, 15]</span>
+              <span>🎓 View Academic & CMA Credentials</span>
               <span>↘</span>
             </a>
             <a class="exec-btn" href="mailto:akashgokul06@gmail.com?subject=CV%20Request%20-%20Akash%20Gokulakrishnan">
-              <span>📄 Request Full Curriculum Vitae (PDF)[cite: 15]</span>
+              <span>📄 Request Full Curriculum Vitae (PDF)</span>
               <span>↗</span>
             </a>
             <div class="copy-toast" id="copyToast">✓ 2-Line summary copied to clipboard!</div>
@@ -385,49 +385,49 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="skills">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">02 — SKILLS[cite: 10]</div><h2>Core Competencies.</h2></div>
-      <p>Distinguishing practical operational finance tools from research and software exposure[cite: 14].</p>
+      <div><div class="kicker">02 — SKILLS</div><h2>Core Competencies.</h2></div>
+      <p>Distinguishing practical operational finance tools from research and software exposure.</p>
     </div>
     <div class="skills-grid">
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16M13 9v11M3 14h18"/></svg>
-        <b>Microsoft Excel[cite: 14]</b>
-        <span>Skilled in spreadsheet-based reporting, financial data modeling, and analysis[cite: 14].</span>
+        <b>Microsoft Excel</b>
+        <span>Skilled in spreadsheet-based reporting, financial data modeling, and analysis.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="8" width="10" height="8" rx="1"/><path d="M4 19V5M4 19h17"/></svg>
-        <b>Tally Prime[cite: 14]</b>
-        <span>Hands-on exposure to ledger bookkeeping, vouchers, and trial balance reporting[cite: 14].</span>
+        <b>Tally Prime</b>
+        <span>Hands-on exposure to ledger bookkeeping, vouchers, and trial balance reporting.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5M4 19h17M7 15l4-4 3 2 5-7"/></svg>
-        <b>Financial Analysis[cite: 14]</b>
-        <span>Evaluating corporate liquidity, profitability, solvency, and operational efficiency ratios[cite: 14].</span>
+        <b>Financial Analysis</b>
+        <span>Evaluating corporate liquidity, profitability, solvency, and operational efficiency ratios.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
-        <b>SPSS Statistical Analysis[cite: 14]</b>
-        <span>Exposure to hypothesis testing, descriptive statistics, ANOVA, and survey evaluation[cite: 14].</span>
+        <b>SPSS Statistical Analysis</b>
+        <span>Exposure to hypothesis testing, descriptive statistics, ANOVA, and survey evaluation.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
-        <b>AI-Assisted Web Dev[cite: 14]</b>
-        <span>Leveraging AI workflows to architect and launch functional web apps and digital tools[cite: 14].</span>
+        <b>AI-Assisted Web Dev</b>
+        <span>Leveraging AI workflows to architect and launch functional web apps and digital tools.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 6 3 12l5 6M16 6l5 6-5 6M14 4l-4 16"/></svg>
-        <b>Google Apps Script[cite: 13]</b>
-        <span>Developing automated web application forms, triggers, and Sheets data tracking[cite: 13].</span>
+        <b>Google Apps Script</b>
+        <span>Developing automated web application forms, triggers, and Sheets data tracking.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        <b>Taxation & Banking Training[cite: 14]</b>
-        <span>Practical understanding of GST, Income Tax practice, and Finacle core banking modules[cite: 14].</span>
+        <b>Taxation & Banking Training</b>
+        <span>Practical understanding of GST, Income Tax practice, and Finacle core banking modules.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <b>Operational Leadership[cite: 14]</b>
-        <span>Event coordination, participant desk logistics, and structured industrial analysis[cite: 14].</span>
+        <b>Operational Leadership</b>
+        <span>Event coordination, participant desk logistics, and structured industrial analysis.</span>
       </div>
     </div>
   </div>
@@ -437,48 +437,48 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="education">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">03 — ACADEMICS[cite: 10]</div><h2>Education & Qualifications.</h2></div>
-      <p>Verified academic qualifications and professional examinations in reverse chronological order[cite: 14].</p>
+      <div><div class="kicker">03 — ACADEMICS</div><h2>Education & Qualifications.</h2></div>
+      <p>Verified academic qualifications and professional examinations in reverse chronological order.</p>
     </div>
     <div class="timeline">
       <div class="time-item">
-        <div class="time-date">Currently Pursuing[cite: 14]</div>
+        <div class="time-date">Currently Pursuing</div>
         <div>
-          <h3>Master of Commerce (Accounting & Finance)[cite: 14]</h3>
-          <div class="sub">Ramakrishna Mission Vivekananda College (Autonomous), Evening College, Chennai[cite: 14]</div>
-          <p>CGPA 8.2 (through Semester 2) | 82.18%[cite: 14]</p>
+          <h3>Master of Commerce (Accounting & Finance)</h3>
+          <div class="sub">Ramakrishna Mission Vivekananda College (Autonomous), Evening College, Chennai</div>
+          <p>CGPA 8.2 (through Semester 2) | 82.18%</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">June 2023 – Dec 2025[cite: 14]</div>
+        <div class="time-date">June 2023 – Dec 2025</div>
         <div>
-          <h3>CMA Intermediate[cite: 14]</h3>
-          <div class="sub">The Institute of Cost Accountants of India[cite: 14]</div>
-          <p>Group I: Completed | Group II: In Progress[cite: 14]</p>
+          <h3>CMA Intermediate</h3>
+          <div class="sub">The Institute of Cost Accountants of India</div>
+          <p>Group I: Completed | Group II: In Progress</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">April 2023[cite: 14]</div>
+        <div class="time-date">April 2023</div>
         <div>
-          <h3>Bachelor of Commerce — First Class with Distinction[cite: 14]</h3>
-          <div class="sub">Guru Nanak College (Autonomous), Evening College, Chennai[cite: 14]</div>
-          <p>CGPA 7.665 | 74.04%[cite: 14]</p>
+          <h3>Bachelor of Commerce — First Class with Distinction</h3>
+          <div class="sub">Guru Nanak College (Autonomous), Evening College, Chennai</div>
+          <p>CGPA 7.665 | 74.04%</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2020[cite: 14]</div>
+        <div class="time-date">March 2020</div>
         <div>
-          <h3>All India Senior School Certificate Examination (CBSE XII)[cite: 14]</h3>
-          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School[cite: 14]</div>
-          <p>76.4%[cite: 14]</p>
+          <h3>All India Senior School Certificate Examination (CBSE XII)</h3>
+          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School</div>
+          <p>76.4%</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2018[cite: 14]</div>
+        <div class="time-date">March 2018</div>
         <div>
-          <h3>All India Secondary School Examination (CBSE X)[cite: 14]</h3>
-          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School[cite: 14]</div>
-          <p>72.2%[cite: 14]</p>
+          <h3>All India Secondary School Examination (CBSE X)</h3>
+          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School</div>
+          <p>72.2%</p>
         </div>
       </div>
     </div>
@@ -489,27 +489,27 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="certifications">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">04 — CREDENTIALS[cite: 10]</div><h2>Certifications.</h2></div>
-      <p>Specialized vocational training in taxation, banking, and practical compliance[cite: 14].</p>
+      <div><div class="kicker">04 — CREDENTIALS</div><h2>Certifications.</h2></div>
+      <p>Specialized vocational training in taxation, banking, and practical compliance.</p>
     </div>
     <div class="cert-grid">
       <div class="cert-card">
-        <div class="cert-date">September 2026[cite: 14]</div>
-        <h3>Finacle & Advanced Banking Program[cite: 14]</h3>
-        <div class="cert-org">Daksha Skilling Academy LLP[cite: 14]</div>
-        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Training in core banking software navigation, teller transactions, and advanced financial operations[cite: 14].</p>
+        <div class="cert-date">September 2026</div>
+        <h3>Finacle & Advanced Banking Program</h3>
+        <div class="cert-org">Daksha Skilling Academy LLP</div>
+        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Training in core banking software navigation, teller transactions, and advanced financial operations.</p>
       </div>
       <div class="cert-card">
-        <div class="cert-date">December 2022[cite: 14]</div>
-        <h3>Income Tax Practitioner[cite: 14]</h3>
-        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)[cite: 14]</div>
-        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Practical computation of income tax, assessment guidelines, deduction provisions, and e-filing frameworks[cite: 14].</p>
+        <div class="cert-date">December 2022</div>
+        <h3>Income Tax Practitioner</h3>
+        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)</div>
+        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Practical computation of income tax, assessment guidelines, deduction provisions, and e-filing frameworks.</p>
       </div>
       <div class="cert-card">
-        <div class="cert-date">May 2022[cite: 14]</div>
-        <h3>GST — Basic Level Training[cite: 14]</h3>
-        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)[cite: 14]</div>
-        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Foundational concepts of Goods and Services Tax, invoice generation, tax slabs, and return structures[cite: 14].</p>
+        <div class="cert-date">May 2022</div>
+        <h3>GST — Basic Level Training</h3>
+        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)</div>
+        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Foundational concepts of Goods and Services Tax, invoice generation, tax slabs, and return structures.</p>
       </div>
     </div>
   </div>
@@ -519,30 +519,30 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="experience">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">05 — EXPOSURE[cite: 10]</div><h2>Experience & Leadership.</h2></div>
-      <p>Event leadership and industrial exposure reports documented in date sequence[cite: 12, 14].</p>
+      <div><div class="kicker">05 — EXPOSURE</div><h2>Experience & Leadership.</h2></div>
+      <p>Event leadership and industrial exposure reports documented in date sequence.</p>
     </div>
     <div class="timeline">
       <div class="time-item">
-        <div class="time-date">March 2026[cite: 12, 14]</div>
+        <div class="time-date">March 2026</div>
         <div>
-          <h3>Industrial Study — Uravu Science & Technology Study Centre, Wayanad[cite: 12, 14]</h3>
-          <p>Studied sustainable bamboo manufacturing and rural entrepreneurship models; prepared an analytical industrial study report[cite: 12, 14].</p>
+          <h3>Industrial Study — Uravu Science & Technology Study Centre, Wayanad</h3>
+          <p>Studied sustainable bamboo manufacturing and rural entrepreneurship models; prepared an analytical industrial study report.</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">October 2025[cite: 12, 14]</div>
+        <div class="time-date">October 2025</div>
         <div>
-          <h3>Event Head — Business Proposal Competition, FinFest 2025[cite: 12, 14]</h3>
-          <div class="sub">P.G. Department of Accounting & Finance[cite: 12]</div>
-          <p>Led planning and execution of the competition, coordinating participants, judges and logistics, and managing scheduling and participant engagement end to end[cite: 14].</p>
+          <h3>Event Head — Business Proposal Competition, FinFest 2025</h3>
+          <div class="sub">P.G. Department of Accounting & Finance</div>
+          <p>Led planning and execution of the competition, coordinating participants, judges and logistics, and managing scheduling and participant engagement end to end.</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">October 2025[cite: 12, 14]</div>
+        <div class="time-date">October 2025</div>
         <div>
-          <h3>Industrial Visit — Chennai Port, Chennai[cite: 12, 14]</h3>
-          <p>Gained exposure to port operations, logistics, cargo handling and supply chain management; prepared an analytical report[cite: 14].</p>
+          <h3>Industrial Visit — Chennai Port, Chennai</h3>
+          <p>Gained exposure to port operations, logistics, cargo handling and supply chain management; prepared an analytical report.</p>
         </div>
       </div>
     </div>
@@ -553,31 +553,31 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="research">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">06 — SCHOLARSHIP[cite: 10]</div><h2>Research & Publications.</h2></div>
-      <p>Academic research capstones and published international conference proceedings[cite: 14].</p>
+      <div><div class="kicker">06 — SCHOLARSHIP</div><h2>Research & Publications.</h2></div>
+      <p>Academic research capstones and published international conference proceedings.</p>
     </div>
     <div class="timeline">
       <div class="time-item">
-        <div class="time-date">February 2026[cite: 14]</div>
+        <div class="time-date">February 2026</div>
         <div>
-          <h3>Published Article: Impact of AI-Enabled Services in SBI YONO[cite: 14]</h3>
-          <div class="sub">International Conference at P.T. Lee Chengalvaraya Naicker College (Presented 06-02-2026; Published in Proceedings)[cite: 14]</div>
-          <p>"A Study on the Impact of AI-Enabled Services in SBI YONO on Accounting Accuracy and Compliance Efficiency with Reference to Rural Users."[cite: 14]</p>
-          <p style="margin-top:6px;">Primary survey study; found no statistically significant link between awareness of AI features and perceived accuracy or compliance efficiency, highlighting the need for greater digital literacy and infrastructure[cite: 14].</p>
+          <h3>Published Article: Impact of AI-Enabled Services in SBI YONO</h3>
+          <div class="sub">International Conference at P.T. Lee Chengalvaraya Naicker College (Presented 06-02-2026; Published in Proceedings)</div>
+          <p>"A Study on the Impact of AI-Enabled Services in SBI YONO on Accounting Accuracy and Compliance Efficiency with Reference to Rural Users."</p>
+          <p style="margin-top:6px;">Primary survey study; found no statistically significant link between awareness of AI features and perceived accuracy or compliance efficiency, highlighting the need for greater digital literacy and infrastructure.</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">April 2023[cite: 14]</div>
+        <div class="time-date">April 2023</div>
         <div>
-          <h3>A Study on Ratio Analysis Between Tata Steel Ltd and JSW Steel Ltd — UG Project[cite: 14]</h3>
-          <p>Compared two listed steel companies using liquidity, profitability, solvency and efficiency ratios from published annual reports; interpreted results to assess operational efficiency and financial health[cite: 14].</p>
+          <h3>A Study on Ratio Analysis Between Tata Steel Ltd and JSW Steel Ltd — UG Project</h3>
+          <p>Compared two listed steel companies using liquidity, profitability, solvency and efficiency ratios from published annual reports; interpreted results to assess operational efficiency and financial health.</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2021[cite: 11, 14]</div>
+        <div class="time-date">March 2021</div>
         <div>
-          <h3>A Study on Negative Traits — UG Project[cite: 11, 14]</h3>
-          <p>Studied negative affectivity and emotional intelligence among peers through a structured survey covering personal traits, anger management, and attitude[cite: 11, 14]. Found most respondents identified as emotional or lonely, with the majority agreeing anger is a normal emotion and viewing attitude positively[cite: 11, 14].</p>
+          <h3>A Study on Negative Traits — UG Project</h3>
+          <p>Studied negative affectivity and emotional intelligence among peers through a structured survey covering personal traits, anger management, and attitude. Found most respondents identified as emotional or lonely, with the majority agreeing anger is a normal emotion and viewing attitude positively.</p>
         </div>
       </div>
     </div>
@@ -588,8 +588,8 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="websites-and-web-apps">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">07 — DIGITAL CREATIONS[cite: 10]</div><h2>Websites & Web Applications I've Built.</h2></div>
-      <p>Digital experiences and practical tools I've developed using AI-assisted workflows and digital technologies[cite: 14].</p>
+      <div><div class="kicker">07 — DIGITAL CREATIONS</div><h2>Websites & Web Applications I've Built.</h2></div>
+      <p>Digital experiences and practical tools I've developed using AI-assisted workflows and digital technologies.</p>
     </div>
 
     <div class="projects">
@@ -804,19 +804,19 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="interests">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">08 — PURSUITS[cite: 10]</div><h2>Personal Interests.</h2></div>
-      <p>Independent areas of continuous personal curiosity and macroeconomic observation[cite: 14].</p>
+      <div><div class="kicker">08 — PURSUITS</div><h2>Personal Interests.</h2></div>
+      <p>Independent areas of continuous personal curiosity and macroeconomic observation.</p>
     </div>
     <div class="interests-grid">
       <div class="interest-card">
-        <div class="kicker">CAPITAL MARKETS[cite: 14]</div>
-        <h3>Stock Market Investing[cite: 14]</h3>
-        <p>Active personal interest in capital market dynamics across equities, systematic investment plans (SIPs), and derivative options trading strategies[cite: 14]. Studied from an analytical perspective to observe market sentiment and valuation fundamentals[cite: 14].</p>
+        <div class="kicker">CAPITAL MARKETS</div>
+        <h3>Stock Market Investing</h3>
+        <p>Active personal interest in capital market dynamics across equities, systematic investment plans (SIPs), and derivative options trading strategies. Studied from an analytical perspective to observe market sentiment and valuation fundamentals.</p>
       </div>
       <div class="interest-card">
-        <div class="kicker">GLOBAL STRATEGY[cite: 14]</div>
-        <h3>Geopolitics[cite: 14]</h3>
-        <p>Keen observer of international political economy, cross-border trade agreements, bilateral supply chain shifts, and their macroeconomic impacts on currency rates, inflation, and global trade flows[cite: 14].</p>
+        <div class="kicker">GLOBAL STRATEGY</div>
+        <h3>Geopolitics</h3>
+        <p>Keen observer of international political economy, cross-border trade agreements, bilateral supply chain shifts, and their macroeconomic impacts on currency rates, inflation, and global trade flows.</p>
       </div>
     </div>
   </div>
@@ -827,15 +827,15 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
   <div class="wrap">
     <div class="contact-panel">
       <div>
-        <div class="eyebrow"><span class="pulse"></span> 09 — CONNECT[cite: 10]</div>
+        <div class="eyebrow"><span class="pulse"></span> 09 — CONNECT</div>
         <h2>Let's talk finance<br>and execution.</h2>
-        <p>Available for corporate finance, accounting operations, analytical roles, or project discussions[cite: 14]. Reach out directly using the details below[cite: 14].</p>
-        <div class="contact-note">Kadambathur - 631203, Tiruvallur District, Tamil Nadu[cite: 14] · +91 8610054558[cite: 14]</div>
+        <p>Available for corporate finance, accounting operations, analytical roles, or project discussions. Reach out directly using the details below.</p>
+        <div class="contact-note">Kadambathur - 631203, Tiruvallur District, Tamil Nadu · +91 8610054558</div>
       </div>
       <div class="contact-buttons">
-        <a class="btn primary" href="mailto:akashgokul06@gmail.com">Email Me ↗[cite: 14]</a>
-        <a class="btn" href="https://linkedin.com/in/akash-gokulakrishnan-ab34511bb" target="_blank" rel="noreferrer">LinkedIn Profile ↗[cite: 14]</a>
-        <button class="btn" id="copyEmail">Copy Email Address[cite: 14]</button>
+        <a class="btn primary" id="emailMeBtn" href="mailto:akashgokul06@gmail.com">Email Me ↗</a>
+        <a class="btn" href="https://linkedin.com/in/akash-gokulakrishnan-ab34511bb" target="_blank" rel="noreferrer">LinkedIn Profile ↗</a>
+        <a class="btn" href="tel:+918610054558">Call Me (+91 8610054558)</a>
       </div>
     </div>
   </div>
@@ -843,8 +843,8 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 </main>
 
 <footer class="wrap">
-  <span>© <span id="year"></span> Akash Gokulakrishnan[cite: 14]</span>
-  <span>Structured Portfolio: About → Skills → Education → Certifications → Experience → Research → Websites & Apps → Interests → Contact[cite: 10]</span>
+  <span>© <span id="year"></span> Akash Gokulakrishnan</span>
+  <span>Structured Portfolio: About → Skills → Education → Certifications → Experience → Research → Websites & Apps → Interests → Contact</span>
   <span><a href="#home">Back to top ↑</a></span>
 </footer>
 
@@ -1354,17 +1354,21 @@ const navMenu = document.getElementById('nav');
 menuBtn.addEventListener('click', () => navMenu.classList.toggle('open'));
 navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
 
-/* 14. EMAIL CLIPBOARD */
-document.getElementById('copyEmail').addEventListener('click', async () => {
-  const b = document.getElementById('copyEmail');
-  try {
-    await navigator.clipboard.writeText('akashgokul06@gmail.com');
-    b.textContent = 'Email Copied ✓';
-  } catch(e) {
-    b.textContent = 'akashgokul06@gmail.com';
-  }
-  setTimeout(() => b.textContent = 'Copy Email Address', 2200);
-});
+/* 14. DUAL-DEVICE ADAPTIVE EMAIL HANDLER (Direct Gmail Web on desktop, default app on mobile) */
+const emailBtn = document.getElementById('emailMeBtn');
+if (emailBtn) {
+  emailBtn.addEventListener('click', (e) => {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (!isMobile) {
+      e.preventDefault();
+      window.open(
+        'https://mail.google.com/mail/?view=cm&fs=1&to=akashgokul06@gmail.com&su=Inquiry%20via%20Portfolio',
+        '_blank',
+        'noreferrer'
+      );
+    }
+  });
+}
 
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
