@@ -101,7 +101,7 @@ section{padding:86px 0;border-top:1px solid #FFFFFF12}
 .exec-card{display:flex;flex-direction:column;justify-content:space-between;height:100%;}
 .exec-highlight{border-left:2px solid var(--site-primary);padding-left:14px;margin:18px 0;font-size:13px;line-height:1.75;color:#CCD5E1;}
 .exec-actions{display:flex;flex-direction:column;gap:10px;margin-top:22px;}
-.exec-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 18px;border-radius:12px;border:1px solid #FFFFFF20;background:#0B1017;color:#F3F5F8;font-size:12px;font-weight:700;transition:all .2s;}
+.exec-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 18px;border-radius:12px;border:1px solid #FFFFFF20;background:#0B1017;color:#F3F5F8;font-size:12px;font-weight:700;transition:all .2s;text-decoration:none;}
 .exec-btn:hover{border-color:var(--site-primary);background:#131B26;color:var(--site-primary);transform:translateX(3px);}
 .copy-toast{font-size:11px;color:var(--site-primary);margin-top:6px;min-height:1.2em;display:none;}
 
@@ -164,9 +164,6 @@ section{padding:86px 0;border-top:1px solid #FFFFFF12}
 .mini-btn:hover{background:var(--site-primary);color:#07110B;}
 .mini-readout{font-size:11px;font-family:monospace;font-weight:800;color:#F3F5F8;}
 .sparkline{width:100%;height:38px;stroke:var(--site-primary);stroke-width:2;fill:none;stroke-linecap:round;}
-.durbar-pulse-bar{height:6px;width:100%;background:#202B37;border-radius:99px;overflow:hidden;position:relative;margin-top:12px}
-.durbar-pulse-progress{height:100%;width:65%;background:linear-gradient(90deg,#F1B6D4,#A3F7BF);animation:sweepProgress 3s ease-in-out infinite alternate;}
-@keyframes sweepProgress{from{width:20%}to{width:90%}}
 
 /* INTERESTS & CONTACT */
 .interests-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
@@ -177,7 +174,7 @@ section{padding:86px 0;border-top:1px solid #FFFFFF12}
 .contact-panel{background:linear-gradient(125deg,#15241E,#141B2B 70%);border:1px solid #A3F7BF32;border-radius:26px;padding:clamp(26px,5vw,54px);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
 .contact-panel h2{font-size:clamp(32px,5vw,58px);letter-spacing:-.06em;line-height:1;margin:12px 0}
 .contact-panel p{color:#AEB9C5;font-size:13px;line-height:1.7;max-width:520px;margin:0}
-.contact-buttons{display:flex;flex-direction:column;gap:10px;min-width:200px}
+.contact-buttons{display:flex;flex-direction:column;gap:10px;min-width:180px}
 .contact-buttons a{text-align:center}
 .contact-note{font-size:10px;color:#798697;margin-top:18px}
 footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;color:#6F7A89;font-size:10px}
@@ -272,14 +269,14 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
   <div class="hero-copy">
     <div class="eyebrow"><span class="pulse"></span> ACCOUNTING & FINANCE | FINANCIAL ANALYSIS | AI-ASSISTED DIGITAL BUILDING</div>
     <h1>Akash<br><span class="outline">Gokulakrishnan.</span></h1>
-    <p>Commerce postgraduate specializing in Accounting and Finance and pursuing CMA Intermediate[cite: 7]. Skilled in financial statement analysis, ratio analysis, and Excel-based reporting with hands-on exposure to Tally Prime[cite: 7], complemented by practical experience in AI-assisted website and web application development[cite: 7].</p>
+    <p>Commerce postgraduate specializing in Accounting and Finance and pursuing CMA Intermediate. Skilled in financial statement analysis, ratio analysis, and Excel-based reporting with hands-on exposure to Tally Prime, complemented by practical experience in AI-assisted website and web application development.</p>
     <div class="actions">
       <a class="btn primary" href="#about">Explore Portfolio ↘</a>
       <a class="btn" href="#education">View Qualifications ↗</a>
     </div>
     <div class="meta-line">
-      <span><i></i> M.Com (Accounting & Finance) — 82.18%[cite: 7]</span>
-      <span><i></i> CMA Intermediate (Group I Completed)[cite: 7]</span>
+      <span><i></i> M.Com (Accounting & Finance) — 82.18%</span>
+      <span><i></i> CMA Intermediate (Group I Completed)</span>
     </div>
   </div>
 
@@ -315,14 +312,14 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
         
         <div class="kpi-grid">
           <div class="kpi-card" id="kpiMcom">
-            <div class="kpi-num">82.18%[cite: 7]</div>
-            <div class="kpi-title">M.Com Aggregate[cite: 7]</div>
-            <div class="kpi-desc">CGPA 8.2 across semesters at Ramakrishna Mission Vivekananda College[cite: 7]</div>
+            <div class="kpi-num">82.18%</div>
+            <div class="kpi-title">M.Com Aggregate</div>
+            <div class="kpi-desc">CGPA 8.2 across semesters at Ramakrishna Mission Vivekananda College</div>
           </div>
           <div class="kpi-card" id="kpiCma">
-            <div class="kpi-num">Group I[cite: 7]</div>
-            <div class="kpi-title">CMA Intermediate[cite: 7]</div>
-            <div class="kpi-desc">Completed ICAI Group I; Group II currently in progress[cite: 7]</div>
+            <div class="kpi-num">Group I</div>
+            <div class="kpi-title">CMA Intermediate</div>
+            <div class="kpi-desc">Completed ICAI Group I; Group II currently in progress</div>
           </div>
           <div class="kpi-card" id="kpiSystems">
             <div class="kpi-num">8+ Apps</div>
@@ -330,16 +327,16 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
             <div class="kpi-desc">Deployed using AI-assisted workflows and Google Apps Script</div>
           </div>
           <div class="kpi-card" id="kpiPaper">
-            <div class="kpi-num">1 Paper[cite: 7]</div>
-            <div class="kpi-title">Conference Study[cite: 7]</div>
-            <div class="kpi-desc">Primary survey on AI-enabled SBI YONO services published in proceedings[cite: 7]</div>
+            <div class="kpi-num">1 Paper</div>
+            <div class="kpi-title">Conference Study</div>
+            <div class="kpi-desc">Primary survey on AI-enabled SBI YONO services published in proceedings</div>
           </div>
         </div>
 
         <div class="pill-row">
-          <span class="pill">Financial Statement Analysis[cite: 7]</span>
-          <span class="pill">Ratio Analysis[cite: 7]</span>
-          <span class="pill">AI-Assisted Development[cite: 7]</span>
+          <span class="pill">Financial Statement Analysis</span>
+          <span class="pill">Ratio Analysis</span>
+          <span class="pill">AI-Assisted Development</span>
         </div>
       </div>
 
@@ -349,18 +346,18 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
           <div>
             <div class="small-label">EXECUTIVE SUMMARY</div>
             <div class="exec-highlight">
-              "Commerce postgraduate specializing in Accounting and Finance, seeking a role in Finance and Accounting Operations to deliver accurate, data-driven financial insights."[cite: 7]
+              "Commerce postgraduate specializing in Accounting and Finance, seeking a role in Finance and Accounting Operations to deliver accurate, data-driven financial insights."
             </div>
             <p class="about-copy">
-              My core academic and professional foundation is firmly rooted in Accounting and Finance[cite: 7]. Supported by CMA Intermediate studies[cite: 7], undergraduate distinction[cite: 7], and empirical banking research[cite: 7], I bring structured analytical thinking to financial statements[cite: 7].
+              My core academic and professional foundation is firmly rooted in Accounting and Finance. Supported by CMA Intermediate studies, undergraduate distinction, and empirical banking research, I bring structured analytical thinking to financial statements.
             </p>
             <p class="about-copy">
-              Alongside finance, I cultivate an active practical interest in developing websites and web applications with the support of AI tools and Google Apps Script[cite: 7], building operational dashboards and tracking systems for departmental and personal workflows.
+              Alongside finance, I cultivate an active practical interest in developing websites and web applications with the support of AI tools and Google Apps Script, building operational dashboards and tracking systems for departmental and personal workflows.
             </p>
           </div>
 
           <div class="exec-actions">
-            <button class="exec-btn" id="btnCopySummary">
+            <button class="exec-btn" id="btnCopySummary" type="button">
               <span>📋 Copy 2-Line Recruiter Summary</span>
               <span>→</span>
             </button>
@@ -368,7 +365,7 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
               <span>🎓 View Academic & CMA Credentials</span>
               <span>↘</span>
             </a>
-            <a class="exec-btn" href="mailto:akashgokul06@gmail.com?subject=CV%20Request%20-%20Akash%20Gokulakrishnan">
+            <a class="exec-btn email-trigger" href="https://mail.google.com/mail/?view=cm&fs=1&to=akashgokul06@gmail.com&su=CV%20Request%20-%20Akash%20Gokulakrishnan" target="_blank" rel="noreferrer">
               <span>📄 Request Full Curriculum Vitae (PDF)</span>
               <span>↗</span>
             </a>
@@ -391,28 +388,28 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
     <div class="skills-grid">
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16M13 9v11M3 14h18"/></svg>
-        <b>Microsoft Excel[cite: 7]</b>
-        <span>Skilled in spreadsheet-based reporting, financial data modeling, and analysis[cite: 7].</span>
+        <b>Microsoft Excel</b>
+        <span>Skilled in spreadsheet-based reporting, financial data modeling, and analysis.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="8" width="10" height="8" rx="1"/><path d="M4 19V5M4 19h17"/></svg>
-        <b>Tally Prime[cite: 7]</b>
-        <span>Hands-on exposure to ledger bookkeeping, vouchers, and trial balance reporting[cite: 7].</span>
+        <b>Tally Prime</b>
+        <span>Hands-on exposure to ledger bookkeeping, vouchers, and trial balance reporting.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5M4 19h17M7 15l4-4 3 2 5-7"/></svg>
-        <b>Financial Analysis[cite: 7]</b>
-        <span>Evaluating corporate liquidity, profitability, solvency, and operational efficiency ratios[cite: 7].</span>
+        <b>Financial Analysis</b>
+        <span>Evaluating corporate liquidity, profitability, solvency, and operational efficiency ratios.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
-        <b>SPSS Statistical Analysis[cite: 7]</b>
-        <span>Exposure to hypothesis testing, descriptive statistics, ANOVA, and survey evaluation[cite: 7].</span>
+        <b>SPSS Statistical Analysis</b>
+        <span>Exposure to hypothesis testing, descriptive statistics, ANOVA, and survey evaluation.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
-        <b>AI-Assisted Web Dev[cite: 7]</b>
-        <span>Leveraging AI workflows to architect and launch functional web apps and digital tools[cite: 7].</span>
+        <b>AI-Assisted Web Dev</b>
+        <span>Leveraging AI workflows to architect and launch functional web apps and digital tools.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 6 3 12l5 6M16 6l5 6-5 6M14 4l-4 16"/></svg>
@@ -421,8 +418,8 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        <b>Taxation & Banking Training[cite: 7]</b>
-        <span>Practical understanding of GST, Income Tax practice, and Finacle core banking modules[cite: 7].</span>
+        <b>Taxation & Banking Training</b>
+        <span>Practical understanding of GST, Income Tax practice, and Finacle core banking modules.</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -442,43 +439,43 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
     </div>
     <div class="timeline">
       <div class="time-item">
-        <div class="time-date">Currently Pursuing[cite: 7]</div>
+        <div class="time-date">Currently Pursuing</div>
         <div>
-          <h3>Master of Commerce (Accounting & Finance)[cite: 7]</h3>
-          <div class="sub">Ramakrishna Mission Vivekananda College (Autonomous), Evening College, Chennai[cite: 7]</div>
-          <p>CGPA 8.2 (through Semester 2) | 82.18%[cite: 7]</p>
+          <h3>Master of Commerce (Accounting & Finance)</h3>
+          <div class="sub">Ramakrishna Mission Vivekananda College (Autonomous), Evening College, Chennai</div>
+          <p>CGPA 8.2 (through Semester 2) | 82.18%</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">June 2023 – Dec 2025[cite: 7]</div>
+        <div class="time-date">June 2023 – Dec 2025</div>
         <div>
-          <h3>CMA Intermediate[cite: 7]</h3>
-          <div class="sub">The Institute of Cost Accountants of India[cite: 7]</div>
-          <p>Group I: Completed | Group II: In Progress[cite: 7]</p>
+          <h3>CMA Intermediate</h3>
+          <div class="sub">The Institute of Cost Accountants of India</div>
+          <p>Group I: Completed | Group II: In Progress</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">April 2023[cite: 7]</div>
+        <div class="time-date">April 2023</div>
         <div>
-          <h3>Bachelor of Commerce — First Class with Distinction[cite: 7]</h3>
-          <div class="sub">Guru Nanak College (Autonomous), Evening College, Chennai[cite: 7]</div>
-          <p>CGPA 7.665 | 74.04%[cite: 7]</p>
+          <h3>Bachelor of Commerce — First Class with Distinction</h3>
+          <div class="sub">Guru Nanak College (Autonomous), Evening College, Chennai</div>
+          <p>CGPA 7.665 | 74.04%</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2020[cite: 7]</div>
+        <div class="time-date">March 2020</div>
         <div>
-          <h3>All India Senior School Certificate Examination (CBSE XII)[cite: 7]</h3>
-          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School[cite: 7]</div>
-          <p>76.4%[cite: 7]</p>
+          <h3>All India Senior School Certificate Examination (CBSE XII)</h3>
+          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School</div>
+          <p>76.4%</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2018[cite: 7]</div>
+        <div class="time-date">March 2018</div>
         <div>
-          <h3>All India Secondary School Examination (CBSE X)[cite: 7]</h3>
-          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School[cite: 7]</div>
-          <p>72.2%[cite: 7]</p>
+          <h3>All India Secondary School Examination (CBSE X)</h3>
+          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School</div>
+          <p>72.2%</p>
         </div>
       </div>
     </div>
@@ -494,21 +491,21 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
     </div>
     <div class="cert-grid">
       <div class="cert-card">
-        <div class="cert-date">September 2026[cite: 7]</div>
-        <h3>Finacle & Advanced Banking Program[cite: 7]</h3>
-        <div class="cert-org">Daksha Skilling Academy LLP[cite: 7]</div>
-        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Training in core banking software navigation, teller transactions, and advanced financial operations[cite: 7].</p>
+        <div class="cert-date">September 2026</div>
+        <h3>Finacle & Advanced Banking Program</h3>
+        <div class="cert-org">Daksha Skilling Academy LLP</div>
+        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Training in core banking software navigation, teller transactions, and advanced financial operations.</p>
       </div>
       <div class="cert-card">
-        <div class="cert-date">December 2022[cite: 7]</div>
-        <h3>Income Tax Practitioner[cite: 7]</h3>
-        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)[cite: 7]</div>
+        <div class="cert-date">December 2022</div>
+        <h3>Income Tax Practitioner</h3>
+        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)</div>
         <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Practical computation of income tax, assessment guidelines, deduction provisions, and e-filing frameworks.</p>
       </div>
       <div class="cert-card">
-        <div class="cert-date">May 2022[cite: 7]</div>
-        <h3>GST — Basic Level Training[cite: 7]</h3>
-        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)[cite: 7]</div>
+        <div class="cert-date">May 2022</div>
+        <h3>GST — Basic Level Training</h3>
+        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)</div>
         <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Foundational concepts of Goods and Services Tax, invoice generation, tax slabs, and return structures.</p>
       </div>
     </div>
@@ -524,25 +521,25 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
     </div>
     <div class="timeline">
       <div class="time-item">
-        <div class="time-date">March 2026[cite: 7]</div>
+        <div class="time-date">March 2026</div>
         <div>
           <h3>Industrial Study — Uravu Science & Technology Study Centre, Wayanad</h3>
-          <p>Studied sustainable bamboo manufacturing and rural entrepreneurship models; prepared an analytical industrial study report[cite: 7].</p>
+          <p>Studied sustainable bamboo manufacturing and rural entrepreneurship models; prepared an analytical industrial study report.</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">October 2025[cite: 7]</div>
+        <div class="time-date">October 2025</div>
         <div>
-          <h3>Event Head — Business Proposal Competition, FinFest 2025[cite: 7]</h3>
+          <h3>Event Head — Business Proposal Competition, FinFest 2025</h3>
           <div class="sub">P.G. Department of Accounting & Finance</div>
-          <p>Led planning and execution of the competition, coordinating participants, judges and logistics, and managing scheduling and participant engagement end to end[cite: 7].</p>
+          <p>Led planning and execution of the competition, coordinating participants, judges and logistics, and managing scheduling and participant engagement end to end.</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">October 2025[cite: 7]</div>
+        <div class="time-date">October 2025</div>
         <div>
-          <h3>Industrial Visit — Chennai Port, Chennai[cite: 7]</h3>
-          <p>Gained exposure to port operations, logistics, cargo handling and supply chain management; prepared an analytical report[cite: 7].</p>
+          <h3>Industrial Visit — Chennai Port, Chennai</h3>
+          <p>Gained exposure to port operations, logistics, cargo handling and supply chain management; prepared an analytical report.</p>
         </div>
       </div>
     </div>
@@ -561,23 +558,23 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
         <div class="time-date">February 2026</div>
         <div>
           <h3>Published Article: Impact of AI-Enabled Services in SBI YONO</h3>
-          <div class="sub">International Conference at P.T. Lee Chengalvaraya Naicker College (Presented 06-02-2026; Published in Proceedings)[cite: 7]</div>
-          <p>"A Study on the Impact of AI-Enabled Services in SBI YONO on Accounting Accuracy and Compliance Efficiency with Reference to Rural Users."[cite: 7]</p>
-          <p style="margin-top:6px;">Primary survey study; found no statistically significant link between awareness of AI features and perceived accuracy or compliance efficiency, highlighting the need for greater digital literacy and infrastructure[cite: 7].</p>
+          <div class="sub">International Conference at P.T. Lee Chengalvaraya Naicker College (Presented 06-02-2026; Published in Proceedings)</div>
+          <p>"A Study on the Impact of AI-Enabled Services in SBI YONO on Accounting Accuracy and Compliance Efficiency with Reference to Rural Users."</p>
+          <p style="margin-top:6px;">Primary survey study; found no statistically significant link between awareness of AI features and perceived accuracy or compliance efficiency, highlighting the need for greater digital literacy and infrastructure.</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">April 2023[cite: 7]</div>
+        <div class="time-date">April 2023</div>
         <div>
-          <h3>A Study on Ratio Analysis Between Tata Steel Ltd and JSW Steel Ltd — UG Project[cite: 7]</h3>
-          <p>Compared two listed steel companies using liquidity, profitability, solvency and efficiency ratios from published annual reports; interpreted results to assess operational efficiency and financial health[cite: 7].</p>
+          <h3>A Study on Ratio Analysis Between Tata Steel Ltd and JSW Steel Ltd — UG Project</h3>
+          <p>Compared two listed steel companies using liquidity, profitability, solvency and efficiency ratios from published annual reports; interpreted results to assess operational efficiency and financial health.</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2021[cite: 7]</div>
+        <div class="time-date">March 2021</div>
         <div>
-          <h3>A Study on Negative Traits — UG Project[cite: 7]</h3>
-          <p>Studied negative affectivity and emotional intelligence among peers through a structured survey covering personal traits, anger management, and attitude[cite: 7]. Found most respondents identified as emotional or lonely, with the majority agreeing anger is a normal emotion and viewing attitude positively[cite: 7].</p>
+          <h3>A Study on Negative Traits — UG Project</h3>
+          <p>Studied negative affectivity and emotional intelligence among peers through a structured survey covering personal traits, anger management, and attitude. Found most respondents identified as emotional or lonely, with the majority agreeing anger is a normal emotion and viewing attitude positively.</p>
         </div>
       </div>
     </div>
@@ -764,4 +761,621 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
           <div class="project-title-row"><h3>AKASH HEMOINTEL</h3><a class="project-link" href="https://script.google.com/macros/s/AKfycbzdWllqfqwg5-OEdcyHBwQUHsnXFIsTGY3E3KHCe6Vu_GTUQOBZoTiFV4x3K69CdiHNmA/exec" target="_blank" rel="noreferrer">↗</a></div>
           <p>A personal blood donation monitoring console tracking historic donation intervals, eligibility schedules, lives impacted, and cloud sheet logging.</p>
           <div class="pill-row"><span class="pill">Google Apps Script</span><span class="pill">Analytics Deck</span><span class="pill">Eligibility Tracking</span></div>
-          <div style="margin-top:16px"><a class="text-link" href="
+          <div style="margin-top:16px"><a class="text-link" href="https://script.google.com/macros/s/AKfycbzdWllqfqwg5-OEdcyHBwQUHsnXFIsTGY3E3KHCe6Vu_GTUQOBZoTiFV4x3K69CdiHNmA/exec" target="_blank" rel="noreferrer">Open System ↗</a></div>
+        </div>
+      </article>
+
+      <!-- 8. KBT CRICKET LEAGUE SCORER -->
+      <article class="project">
+        <div class="project-visual">
+          <div class="visual-label-bar">
+            <span class="visual-label">SPORTS SCORER · FIXTURE CALCULATOR</span>
+          </div>
+          <div class="mock-window">
+            <div style="padding:16px;background:linear-gradient(135deg,#16212D,#0A0F16);height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+              <div class="visual-label" style="color:var(--site-primary)">LIVE MATCH SCOREBOARD</div>
+              <div class="cricket-score" id="cricketScoreBoard" style="font-size:22px;margin-top:10px;font-family:monospace;font-weight:800;">142/3 (14.2)</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="tile-interactive-strip">
+            <span class="mini-readout">TEST SCORER PAD</span>
+            <div style="display:flex;gap:6px;">
+              <button class="mini-btn" id="btnSix">+6 RUNS</button>
+              <button class="mini-btn" id="btnWkt" style="color:#F1B6D4">+WICKET</button>
+            </div>
+          </div>
+          <div class="project-title-row"><h3>KBT Cricket League Scorer</h3><a class="project-link" href="https://script.google.com/macros/s/AKfycbzB0xHKR-5txMuh3UHsppB9fZnmqg_0rBRBy7cpTQ43ZUZKLrBg3OyXUC0lShiEO5re/exec" target="_blank" rel="noreferrer">↗</a></div>
+          <p>A cricket match scoring web application concept featuring ball-by-ball updates, extras tracking, innings statistics, and rulebook references.</p>
+          <div class="pill-row"><span class="pill">Sports Scoring</span><span class="pill">Data Logging</span><span class="pill">Match Summary</span></div>
+          <div style="margin-top:16px"><a class="text-link" href="https://script.google.com/macros/s/AKfycbzB0xHKR-5txMuh3UHsppB9fZnmqg_0rBRBy7cpTQ43ZUZKLrBg3OyXUC0lShiEO5re/exec" target="_blank" rel="noreferrer">Open Scorer ↗</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 08. INTERESTS -->
+<section id="interests">
+  <div class="wrap">
+    <div class="section-head">
+      <div><div class="kicker">08 — PURSUITS</div><h2>Personal Interests.</h2></div>
+      <p>Independent areas of continuous personal curiosity and macroeconomic observation.</p>
+    </div>
+    <div class="interests-grid">
+      <div class="interest-card">
+        <div class="kicker">CAPITAL MARKETS</div>
+        <h3>Stock Market Investing</h3>
+        <p>Active personal interest in capital market dynamics across equities, systematic investment plans (SIPs), and derivative options trading strategies. Studied from an analytical perspective to observe market sentiment and valuation fundamentals.</p>
+      </div>
+      <div class="interest-card">
+        <div class="kicker">GLOBAL STRATEGY</div>
+        <h3>Geopolitics</h3>
+        <p>Keen observer of international political economy, cross-border trade agreements, bilateral supply chain shifts, and their macroeconomic impacts on currency rates, inflation, and global trade flows.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 09. CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-panel">
+      <div>
+        <div class="eyebrow"><span class="pulse"></span> 09 — CONNECT</div>
+        <h2>Let's talk finance<br>and execution.</h2>
+        <p>Available for corporate finance, accounting operations, analytical roles, or project discussions. Reach out directly using the details below.</p>
+        <div class="contact-note">Kadambathur - 631203, Tiruvallur District, Tamil Nadu · +91 8610054558</div>
+      </div>
+      <div class="contact-buttons">
+        <a class="btn primary email-trigger" href="https://mail.google.com/mail/?view=cm&fs=1&to=akashgokul06@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noreferrer">Email Me ↗</a>
+        <a class="btn" href="https://linkedin.com/in/akash-gokulakrishnan-ab34511bb" target="_blank" rel="noreferrer">LinkedIn Profile ↗</a>
+        <a class="btn" href="tel:+918610054558">Call Me (+91 8610054558)</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <span>© <span id="year"></span> Akash Gokulakrishnan</span>
+  <span>Structured Portfolio: About → Skills → Education → Certifications → Experience → Research → Websites & Apps → Interests → Contact</span>
+  <span><a href="#home">Back to top ↑</a></span>
+</footer>
+
+<!-- LIGHTBOX INSPECT MODAL -->
+<dialog id="imageLightbox">
+  <div class="modal-head">
+    <span class="kicker" id="lightboxTitle" style="margin:0">APPLICATION PREVIEW</span>
+    <button class="modal-close" id="closeLightbox">Close ×</button>
+  </div>
+  <div class="lightbox-img-box">
+    <img id="lightboxImage" src="" alt="Full App Inspection">
+  </div>
+</dialog>
+
+<!-- FINFEST CRISIS MINI-GAME MODAL -->
+<dialog id="crisisModal">
+  <div class="modal-head">
+    <span class="kicker" style="margin:0">FINFEST MINI-GAME · CRISIS DURBAR SIM</span>
+    <button class="modal-close" id="closeCrisisModal">Esc ×</button>
+  </div>
+  <div class="modal-content">
+    <h3>Urgent: Foreign Exchange Shock!</h3>
+    <p style="color:#A4B2C2;line-height:1.7;">Your import raw material invoices increased by 18% following currency movement. You have 30 seconds to choose a working capital defense.</p>
+    <div style="background:#090E16;border:1px solid #FFFFFF16;border-radius:14px;padding:16px;margin-bottom:18px;">
+      <div style="font-size:12px;display:flex;justify-content:space-between;margin-bottom:8px;">
+        <span>LIQUIDITY RESERVE:</span><strong id="simLiquidity" style="color:var(--site-primary)">₹ 45.0 LAKHS</strong>
+      </div>
+      <div style="font-size:12px;display:flex;justify-content:space-between;">
+        <span>SOLVENCY RATING:</span><strong id="simRating" style="color:var(--site-primary)">AAA</strong>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn primary" id="crisisOpt1">Hedge with Forward Contract</button>
+      <button class="btn" id="crisisOpt2">Liquidate Cash Equivalents</button>
+    </div>
+    <div id="crisisFeedback" style="margin-top:14px;font-size:12px;color:var(--site-primary);min-height:18px;"></div>
+  </div>
+</dialog>
+
+<!-- COMMAND PALETTE (CMD+K) -->
+<dialog id="commandPalette" aria-label="Portfolio Command Palette">
+  <div class="palette-top">
+    <span style="color:var(--site-primary)">⌕</span>
+    <input id="paletteSearch" type="search" placeholder="Search section, project, or tool..." autocomplete="off">
+    <button class="modal-close" id="closePalette">Esc</button>
+  </div>
+  <div class="palette-results" id="paletteResults"></div>
+</dialog>
+
+<div class="utility-dock">
+  <button class="utility-button" id="soundToggle">🔊 Audio: On</button>
+  <button class="utility-button" id="themeCycleBtn">◉ Theme Cycle</button>
+  <button class="utility-button" id="openPalette">⌘K · Menu</button>
+</div>
+
+<canvas id="motionCanvas"></canvas>
+</div>
+
+<script>
+/* 1. TELEMETRY & SCORE ENGINE */
+let score = 0;
+const scoreDisplay = document.getElementById('hudScore');
+function addScore(pts = 10) {
+  score += pts;
+  scoreDisplay.textContent = `${score} PTS`;
+}
+
+/* 2. SYNTHESIZED WEB AUDIO API */
+let soundEnabled = true;
+const AudioCtx = window.AudioContext || window.webkitAudioContext;
+let audioCtx = null;
+
+function initAudio() {
+  if (!audioCtx) audioCtx = new AudioCtx();
+  if (audioCtx.state === 'suspended') audioCtx.resume();
+}
+
+function playTone(freq, type = 'sine', duration = 0.08, gainVal = 0.05) {
+  if (!soundEnabled) return;
+  try {
+    initAudio();
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+    gain.gain.setValueAtTime(gainVal, audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime + duration);
+  } catch (e) {}
+}
+
+const soundToggleBtn = document.getElementById('soundToggle');
+soundToggleBtn.addEventListener('click', () => {
+  soundEnabled = !soundEnabled;
+  soundToggleBtn.textContent = soundEnabled ? '🔊 Audio: On' : '🔇 Audio: Off';
+  if (soundEnabled) playTone(540, 'sine', 0.1, 0.08);
+});
+
+document.querySelectorAll('.btn, .nav a, .project-link, .mini-btn, .zoom-hint, .kpi-card, .exec-btn, .cert-card').forEach(el => {
+  el.addEventListener('mouseenter', () => playTone(840, 'sine', 0.03, 0.015));
+  el.addEventListener('click', () => {
+    playTone(480, 'triangle', 0.08, 0.05);
+    addScore(5);
+  });
+});
+
+/* 3. HERO GYROSCOPE TILT & DRAGGABLE BADGES */
+const heroStage = document.getElementById('heroStage');
+const heroCard = document.getElementById('heroCard');
+const haloRing = document.getElementById('haloRing');
+let cardRotX = 0, cardRotY = 0, targetRotX = 0, targetRotY = 0;
+
+heroStage.addEventListener('pointermove', (e) => {
+  const rect = heroStage.getBoundingClientRect();
+  const x = (e.clientX - rect.left) / rect.width - 0.5;
+  const y = (e.clientY - rect.top) / rect.height - 0.5;
+  targetRotY = x * 36;
+  targetRotX = -y * 36;
+});
+
+heroStage.addEventListener('pointerleave', () => {
+  targetRotX = 0;
+  targetRotY = 0;
+});
+
+function animateHero() {
+  cardRotX += (targetRotX - cardRotX) * 0.1;
+  cardRotY += (targetRotY - cardRotY) * 0.1;
+  heroCard.style.transform = `rotateX(${cardRotX}deg) rotateY(${cardRotY}deg)`;
+  haloRing.style.transform = `rotateX(${65 + cardRotX * 0.4}deg) rotateZ(${cardRotY * 0.8}deg)`;
+  requestAnimationFrame(animateHero);
+}
+animateHero();
+
+function makeDraggable(el) {
+  let isDragging = false, startX, startY, posX = 0, posY = 0;
+  el.addEventListener('pointerdown', (e) => {
+    isDragging = true;
+    startX = e.clientX - posX;
+    startY = e.clientY - posY;
+    el.setPointerCapture(e.pointerId);
+    playTone(620, 'sine', 0.08, 0.05);
+    addScore(15);
+  });
+  
+  el.addEventListener('pointermove', (e) => {
+    if (!isDragging) return;
+    posX = e.clientX - startX;
+    posY = e.clientY - startY;
+    el.style.transform = `translate(${posX}px, ${posY}px) scale(1.06)`;
+  });
+  
+  el.addEventListener('pointerup', () => {
+    isDragging = false;
+    el.style.transition = 'transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+    el.style.transform = `translate(0px, 0px) scale(1)`;
+    posX = 0; posY = 0;
+    setTimeout(() => { el.style.transition = ''; }, 500);
+    playTone(340, 'sine', 0.1, 0.05);
+  });
+}
+makeDraggable(document.getElementById('badgeA'));
+makeDraggable(document.getElementById('badgeB'));
+
+/* 4. 3D CARD TILT & SPECULAR CURSOR LIGHT */
+document.querySelectorAll('.project, .cert-card, .interest-card').forEach(card => {
+  card.addEventListener('pointermove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    card.style.setProperty('--spot-x', `${x}px`);
+    card.style.setProperty('--spot-y', `${y}px`);
+    
+    const normX = (x / rect.width - 0.5) * 14;
+    const normY = (y / rect.height - 0.5) * -14;
+    card.style.transform = `perspective(900px) rotateX(${normY}deg) rotateY(${normX}deg) translateY(-4px)`;
+  });
+  
+  card.addEventListener('pointerleave', () => {
+    card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+  });
+});
+
+/* 5. LIGHTBOX MODAL FOR SCREENSHOTS */
+const lightbox = document.getElementById('imageLightbox');
+const lightboxImg = document.getElementById('lightboxImage');
+const lightboxTitle = document.getElementById('lightboxTitle');
+
+document.querySelectorAll('[data-lightbox]').forEach(el => {
+  el.addEventListener('click', () => {
+    const imgId = el.dataset.lightbox;
+    const targetImg = document.getElementById(imgId);
+    if (targetImg) {
+      lightboxImg.src = targetImg.src;
+      lightboxTitle.textContent = targetImg.alt.toUpperCase();
+      lightbox.showModal();
+      playTone(520, 'sine', 0.1, 0.05);
+    }
+  });
+});
+document.getElementById('closeLightbox').addEventListener('click', () => lightbox.close());
+
+/* 6. RECRUITER 2-LINE SUMMARY CLIPBOARD COPY */
+const btnCopySummary = document.getElementById('btnCopySummary');
+const copyToast = document.getElementById('copyToast');
+const summaryText = "Akash Gokulakrishnan is a Commerce postgraduate (M.Com - 82.18%) and CMA Intermediate qualifier skilled in financial analysis and Excel reporting, with practical experience in AI-assisted web application development.";
+
+btnCopySummary.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(summaryText);
+    copyToast.style.display = 'block';
+    setTimeout(() => { copyToast.style.display = 'none'; }, 3200);
+    playTone(900, 'triangle', 0.1, 0.06);
+    addScore(20);
+  } catch (err) {
+    alert(summaryText);
+  }
+});
+
+/* 7. REAL-TIME INTERACTIVE BUTTON ENGINES ON TILES */
+const btnFilterPlacement = document.getElementById('btnFilterPlacement');
+const placementCounter = document.getElementById('placementCounter');
+let pStages = ['ACTIVE: 42 REGISTERED', 'STAGE: 18 SHORTLISTED', 'STAGE: 8 FINAL SELECTS'];
+let pIdx = 0;
+btnFilterPlacement.addEventListener('click', () => {
+  pIdx = (pIdx + 1) % pStages.length;
+  placementCounter.textContent = pStages[pIdx];
+  playTone(720, 'sine', 0.08, 0.04);
+  addScore(10);
+});
+
+const btnSimulateSubmit = document.getElementById('btnSimulateSubmit');
+const formStatus = document.getElementById('formStatus');
+btnSimulateSubmit.addEventListener('click', () => {
+  formStatus.textContent = '✓ ROLL 24PG102 VERIFIED';
+  formStatus.style.color = 'var(--site-primary)';
+  playTone(880, 'triangle', 0.1, 0.06);
+  addScore(15);
+});
+
+const btnToggleDeskView = document.getElementById('btnToggleDeskView');
+const imgDurbar = document.getElementById('img-durbar-main');
+let isDeskView = false;
+btnToggleDeskView.addEventListener('click', () => {
+  isDeskView = !isDeskView;
+  imgDurbar.src = isDeskView ? '67909.png' : '67902.png';
+  btnToggleDeskView.textContent = isDeskView ? 'Show Simulation Desk' : 'Show Security PIN Desk';
+  playTone(550, 'sine', 0.08, 0.04);
+  addScore(15);
+});
+
+const buyStockBtn = document.getElementById('buyStockBtn');
+const sellStockBtn = document.getElementById('sellStockBtn');
+const stockDelta = document.getElementById('stockDelta');
+const stockLine = document.getElementById('stockLine');
+let simPrice = 24.6;
+
+buyStockBtn.addEventListener('click', () => {
+  simPrice += 1.8;
+  stockDelta.textContent = `+${simPrice.toFixed(2)} (+${(simPrice * 0.04).toFixed(2)}%)`;
+  stockDelta.style.color = 'var(--site-primary)';
+  stockLine.setAttribute('d', 'M 0,25 Q 25,12 45,8 T 90,4 T 100,2');
+  playTone(880, 'triangle', 0.09, 0.06);
+  addScore(10);
+});
+
+sellStockBtn.addEventListener('click', () => {
+  simPrice -= 1.8;
+  stockDelta.textContent = `${simPrice.toFixed(2)} (${(simPrice * 0.04).toFixed(2)}%)`;
+  stockDelta.style.color = '#F1B6D4';
+  stockLine.setAttribute('d', 'M 0,10 Q 25,16 45,22 T 90,28 T 100,32');
+  playTone(320, 'triangle', 0.09, 0.06);
+  addScore(10);
+});
+
+const btnCycleSlot = document.getElementById('btnCycleSlot');
+const slotStatus = document.getElementById('slotStatus');
+let slots = ['SLOT: 11:00 AM AVAILABLE', 'SLOT: 1:45 PM AVAILABLE', 'SLOT: 3:15 PM AVAILABLE'];
+let sIdx = 0;
+btnCycleSlot.addEventListener('click', () => {
+  sIdx = (sIdx + 1) % slots.length;
+  slotStatus.textContent = slots[sIdx];
+  playTone(660, 'sine', 0.08, 0.04);
+  addScore(10);
+});
+
+const accelerateBtn = document.getElementById('accelerateBtn');
+const odoSpeedDisplay = document.getElementById('odoSpeedDisplay');
+let currSpeed = 54;
+accelerateBtn.addEventListener('click', () => {
+  currSpeed = (currSpeed + 16) % 150;
+  odoSpeedDisplay.textContent = `ODOMETER: ${currSpeed} KM/H`;
+  playTone(280 + currSpeed * 3, 'sawtooth', 0.1, 0.04);
+  addScore(10);
+});
+
+const btnLogHemo = document.getElementById('btnLogHemo');
+const hemoReadout = document.getElementById('hemoReadout');
+let count = 6;
+btnLogHemo.addEventListener('click', () => {
+  count += 1;
+  hemoReadout.textContent = `DONATIONS: ${count} LOGGED`;
+  playTone(820, 'sine', 0.1, 0.06);
+  addScore(15);
+});
+
+let runs = 142, wkts = 3, balls = 2;
+const cricketScoreBoard = document.getElementById('cricketScoreBoard');
+document.getElementById('btnSix').addEventListener('click', () => {
+  runs += 6;
+  balls = (balls + 1) % 6;
+  cricketScoreBoard.textContent = `${runs}/${wkts} (14.${balls})`;
+  playTone(990, 'sine', 0.15, 0.08);
+  addScore(20);
+});
+document.getElementById('btnWkt').addEventListener('click', () => {
+  if (wkts < 10) wkts += 1;
+  balls = (balls + 1) % 6;
+  cricketScoreBoard.textContent = `${runs}/${wkts} (14.${balls})`;
+  playTone(200, 'square', 0.2, 0.07);
+  addScore(15);
+});
+
+/* 8. CANVAS GRAVITATIONAL PARTICLES */
+const canvas = document.getElementById('motionCanvas');
+const ctx = canvas.getContext('2d');
+let w, h, points = [], mouse = { x: -1000, y: -1000 };
+
+function resizeCanvas() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+  points = Array.from({ length: 48 }, () => ({
+    x: Math.random() * w,
+    y: Math.random() * h,
+    vx: (Math.random() - 0.5) * 0.45,
+    vy: (Math.random() - 0.5) * 0.45,
+    r: Math.random() * 1.5 + 1
+  }));
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+window.addEventListener('pointermove', (e) => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+  const glow = document.getElementById('glow');
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+});
+
+function drawCanvas() {
+  ctx.clearRect(0, 0, w, h);
+  const strokeColor = getComputedStyle(document.documentElement).getPropertyValue('--site-primary').trim() || '#A3F7BF';
+  
+  for (let i = 0; i < points.length; i++) {
+    const p = points[i];
+    p.x += p.vx;
+    p.y += p.vy;
+    if (p.x < 0 || p.x > w) p.vx *= -1;
+    if (p.y < 0 || p.y > h) p.vy *= -1;
+    
+    const dMouse = Math.hypot(mouse.x - p.x, mouse.y - p.y);
+    if (dMouse < 130) {
+      p.x -= (mouse.x - p.x) * 0.02;
+      p.y -= (mouse.y - p.y) * 0.02;
+    }
+    
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+    ctx.fillStyle = strokeColor;
+    ctx.globalAlpha = 0.25;
+    ctx.fill();
+    
+    for (let j = i + 1; j < points.length; j++) {
+      const q = points[j];
+      const dist = Math.hypot(p.x - q.x, p.y - q.y);
+      if (dist < 110) {
+        ctx.beginPath();
+        ctx.moveTo(p.x, p.y);
+        ctx.lineTo(q.x, q.y);
+        ctx.strokeStyle = strokeColor;
+        ctx.globalAlpha = (1 - dist / 110) * 0.12;
+        ctx.lineWidth = 0.8;
+        ctx.stroke();
+      }
+    }
+  }
+  ctx.globalAlpha = 1;
+  requestAnimationFrame(drawCanvas);
+}
+drawCanvas();
+
+/* 9. MARQUEE & SCROLL TRACKER */
+let lastScrollY = window.scrollY;
+const marqueeTrack = document.getElementById('marqueeTrack');
+let marqueePos = 0;
+
+window.addEventListener('scroll', () => {
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  document.getElementById('readingProgress').style.width = (max > 0 ? (window.scrollY / max * 100) : 0) + '%';
+  
+  const delta = Math.abs(window.scrollY - lastScrollY);
+  marqueePos -= (1 + delta * 0.25);
+  marqueeTrack.style.transform = `translateX(${marqueePos % 600}px)`;
+  lastScrollY = window.scrollY;
+}, { passive: true });
+
+function stepMarquee() {
+  marqueePos -= 0.6;
+  marqueeTrack.style.transform = `translateX(${marqueePos % 600}px)`;
+  requestAnimationFrame(stepMarquee);
+}
+stepMarquee();
+
+/* 10. FINFEST CRISIS MODAL DECISION SIM */
+const crisisModal = document.getElementById('crisisModal');
+document.getElementById('openCrisisBtn').addEventListener('click', () => {
+  crisisModal.showModal();
+  playTone(400, 'sine', 0.1, 0.05);
+});
+document.getElementById('closeCrisisModal').addEventListener('click', () => crisisModal.close());
+
+document.getElementById('crisisOpt1').addEventListener('click', () => {
+  document.getElementById('simLiquidity').textContent = '₹ 52.5 LAKHS (+16%)';
+  document.getElementById('simRating').textContent = 'AAA+';
+  document.getElementById('crisisFeedback').textContent = '✓ Optimal: Forward hedge stabilized margins against currency slippage.';
+  playTone(880, 'sine', 0.15, 0.08);
+  addScore(50);
+});
+
+document.getElementById('crisisOpt2').addEventListener('click', () => {
+  document.getElementById('simLiquidity').textContent = '₹ 31.0 LAKHS (-31%)';
+  document.getElementById('simRating').textContent = 'AA-';
+  document.getElementById('crisisFeedback').textContent = '⚠ Warning: Cash liquidation increases exposure to short-term liabilities.';
+  playTone(240, 'triangle', 0.15, 0.08);
+  addScore(25);
+});
+
+/* 11. THEME ENGINE */
+const themes = [
+  { name: 'MINT (#A3F7BF)', color: '#A3F7BF', dark: '#090C12' },
+  { name: 'CYAN (#8EDCFF)', color: '#8EDCFF', dark: '#071018' },
+  { name: 'VIOLET (#B7A1FF)', color: '#B7A1FF', dark: '#0D0A16' },
+  { name: 'CORAL (#FFB19E)', color: '#FFB19E', dark: '#160D0C' }
+];
+let themeIdx = 0;
+document.getElementById('themeCycleBtn').addEventListener('click', () => {
+  themeIdx = (themeIdx + 1) % themes.length;
+  const t = themes[themeIdx];
+  document.documentElement.style.setProperty('--site-primary', t.color);
+  document.documentElement.style.setProperty('--site-background', t.dark);
+  document.getElementById('hudAccent').textContent = t.name;
+  playTone(550, 'sine', 0.07, 0.05);
+  addScore(15);
+});
+
+/* 12. COMMAND PALETTE (CMD+K NAVIGATION) */
+const palette = document.getElementById('commandPalette');
+const paletteSearch = document.getElementById('paletteSearch');
+const paletteResults = document.getElementById('paletteResults');
+
+const destinations = [
+  { label: '01. About Me', target: '#about', desc: 'Background & Metrics' },
+  { label: '02. Skills', target: '#skills', desc: 'Accounting & Tools' },
+  { label: '03. Education & Qualifications', target: '#education', desc: 'M.Com, CMA Inter, B.Com' },
+  { label: '04. Certifications', target: '#certifications', desc: 'GST, Income Tax, Finacle' },
+  { label: '05. Experience & Leadership', target: '#experience', desc: 'FinFest 2025 & Port Study' },
+  { label: '06. Research & Publications', target: '#research', desc: 'SBI YONO & Ratio Capstone' },
+  { label: '07. Websites & Web Applications', target: '#websites-and-web-apps', desc: 'All Deployed Apps' },
+  { label: '08. Personal Interests', target: '#interests', desc: 'Stock Market & Geopolitics' },
+  { label: '09. Contact', target: '#contact', desc: 'Email, Phone & LinkedIn' }
+];
+
+function renderPalette(filter = '') {
+  paletteResults.innerHTML = '';
+  const filtered = destinations.filter(d => d.label.toLowerCase().includes(filter.toLowerCase()) || d.desc.toLowerCase().includes(filter.toLowerCase()));
+  filtered.forEach(d => {
+    const btn = document.createElement('button');
+    btn.className = 'palette-result';
+    btn.innerHTML = `<span><strong>${d.label}</strong></span><span style="font-size:11px;color:#8E9AAA">${d.desc}</span>`;
+    btn.onclick = () => {
+      palette.close();
+      document.querySelector(d.target).scrollIntoView({ behavior: 'smooth' });
+    };
+    paletteResults.appendChild(btn);
+  });
+}
+renderPalette();
+
+paletteSearch.addEventListener('input', (e) => renderPalette(e.target.value));
+document.getElementById('openPalette').addEventListener('click', () => { palette.showModal(); renderPalette(); });
+document.getElementById('closePalette').addEventListener('click', () => palette.close());
+window.addEventListener('keydown', (e) => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault();
+    palette.open ? palette.close() : palette.showModal();
+    renderPalette();
+  }
+});
+
+/* 13. RESPONSIVE MOBILE MENU */
+const menuBtn = document.getElementById('menu');
+const navMenu = document.getElementById('nav');
+menuBtn.addEventListener('click', () => navMenu.classList.toggle('open'));
+navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+
+/* 14. UNIVERSAL DIRECT GMAIL REDIRECT (PC & MOBILE) */
+document.querySelectorAll('.email-trigger').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const targetEmail = 'akashgokul06@gmail.com';
+    const subject = encodeURIComponent('Portfolio Inquiry / Opportunity');
+    const gmailWebComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${targetEmail}&su=${subject}`;
+    
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+      // In mobile, try opening the Gmail web interface in a new tab first
+      const opened = window.open(gmailWebComposeUrl, '_blank');
+      // If popup blocker stops it or app fails, fall back to mailto intent
+      if (!opened || opened.closed || typeof opened.closed === 'undefined') {
+        window.location.href = `mailto:${targetEmail}?subject=${subject}`;
+      }
+    } else {
+      // In Desktop PC, open Gmail Web directly with recipient pre-filled
+      window.open(gmailWebComposeUrl, '_blank', 'noopener,noreferrer');
+    }
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
