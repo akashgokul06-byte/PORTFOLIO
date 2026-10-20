@@ -6,213 +6,488 @@
 <title>Akash Gokulakrishnan — Portfolio</title>
 <style>
 :root {
- --site-primary:#A3F7BF;
- --site-secondary:#202633;
- --site-background:#090C12;
- --site-on-primary:#07110B;
- --site-on-secondary:#F3F5F8;
- --site-on-background:#F3F5F8;
- --site-font-body:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
- color-scheme:dark;
+  --site-primary: #A3F7BF;
+  --site-secondary: #202633;
+  --site-background: #090C12;
+  --site-on-primary: #07110B;
+  --site-on-secondary: #F3F5F8;
+  --site-on-background: #F3F5F8;
+  --site-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color-scheme: dark;
 }
-*{box-sizing:border-box} 
-html{scroll-behavior:smooth;scroll-padding-top:90px} 
-body{margin:0;font-family:var(--site-font-body);background:var(--site-background);color:var(--site-on-background);overflow-x:hidden;} 
-#app{min-height:100vh;width:100%;background-color:var(--site-background);color:var(--site-on-background);position:relative;isolation:isolate} 
-.wrap{width:min(1180px,calc(100% - 36px));margin:auto} 
-a{color:inherit;text-decoration:none} 
-button{font:inherit;cursor:pointer} 
-.decor{position:absolute;pointer-events:none;z-index:-1} 
-.orb{width:420px;height:420px;border-radius:50%;filter:blur(90px);background:#1B8D65;opacity:.15;top:90px;right:-150px}
-.orb2{width:330px;height:330px;border-radius:50%;filter:blur(90px);background:#6478FF;opacity:.12;left:-160px;top:850px}
-.gridbg{inset:0;background-image:linear-gradient(#FFFFFF08 1px,transparent 1px),linear-gradient(90deg,#FFFFFF08 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 75%);opacity:.38}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  margin: 0;
+  font-family: var(--site-font-body);
+  background-color: var(--site-background);
+  color: var(--site-on-background);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+#app {
+  min-height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  color: var(--site-on-background);
+  position: relative;
+  isolation: isolate;
+}
+.wrap { width: min(1180px, calc(100% - 36px)); margin: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+.decor { position: absolute; pointer-events: none; z-index: -1; }
+.orb {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  filter: blur(90px);
+  background: #1B8D65;
+  opacity: 0.15;
+  top: 90px;
+  right: -150px;
+}
+.orb2 {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  filter: blur(90px);
+  background: #6478FF;
+  opacity: 0.12;
+  left: -160px;
+  top: 850px;
+}
+.gridbg {
+  inset: 0;
+  background-image: linear-gradient(#FFFFFF08 1px, transparent 1px), linear-gradient(90deg, #FFFFFF08 1px, transparent 1px);
+  background-size: 54px 54px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+  opacity: 0.38;
+}
 
-/* LIVE STATUS HUD */
-.live-hud{position:sticky;top:0;z-index:45;background:#05070BD9;backdrop-filter:blur(12px);border-bottom:1px solid #FFFFFF0D;font-size:10px;padding:7px 0;letter-spacing:.08em;color:#788698;}
-.hud-flex{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-.hud-indicator{display:inline-flex;align-items:center;gap:7px;}
-.hud-pulse{width:6px;height:6px;background:var(--site-primary);border-radius:50%;box-shadow:0 0 10px var(--site-primary);animation:pulse 1.8s infinite;}
+/* LIVE HUD */
+.live-hud {
+  position: sticky;
+  top: 0;
+  z-index: 45;
+  background: #05070BD9;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #FFFFFF0D;
+  font-size: 10px;
+  padding: 7px 0;
+  letter-spacing: 0.08em;
+  color: #788698;
+}
+.hud-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.hud-indicator { display: inline-flex; align-items: center; gap: 7px; }
+.hud-pulse {
+  width: 6px;
+  height: 6px;
+  background: var(--site-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--site-primary);
+  animation: pulse 1.8s infinite;
+}
 
-header{position:sticky;top:31px;z-index:40;background:#090C12E6;backdrop-filter:blur(18px);border-bottom:1px solid #FFFFFF12}
-.nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.brand{font-weight:850;letter-spacing:-.04em;font-size:17px;display:inline-flex;gap:6px;}
-.brand span{color:var(--site-primary)} 
-nav{display:flex;align-items:center;gap:16px;font-size:11.5px;color:#AEB6C3} 
-nav a:hover{color:var(--site-primary)} 
-.nav-cta,.btn{border:1px solid #FFFFFF26;border-radius:999px;padding:12px 18px;background:transparent;color:#F3F5F8;font-size:12px;transition:all .2s;position:relative;overflow:hidden;}
-.nav-cta:hover,.btn:hover{transform:translateY(-2px);border-color:var(--site-primary)} 
-.btn.primary{background:var(--site-primary);color:#07110B;border-color:var(--site-primary);font-weight:750}
-.menu{display:none;background:none;border:1px solid #FFFFFF30;color:white;border-radius:12px;padding:9px}
+header {
+  position: sticky;
+  top: 31px;
+  z-index: 40;
+  background: #090C12E6;
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid #FFFFFF12;
+}
+.nav { height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.brand { font-weight: 850; letter-spacing: -0.04em; font-size: 17px; display: inline-flex; gap: 6px; }
+.brand span { color: var(--site-primary); }
+nav { display: flex; align-items: center; gap: 16px; font-size: 11.5px; color: #AEB6C3; }
+nav a:hover { color: var(--site-primary); }
+.nav-cta, .btn {
+  border: 1px solid #FFFFFF26;
+  border-radius: 999px;
+  padding: 12px 18px;
+  background: transparent;
+  color: #F3F5F8;
+  font-size: 12px;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+.nav-cta:hover, .btn:hover { transform: translateY(-2px); border-color: var(--site-primary); }
+.btn.primary { background: var(--site-primary); color: #07110B; border-color: var(--site-primary); font-weight: 750; }
+.menu { display: none; background: none; border: 1px solid #FFFFFF30; color: white; border-radius: 12px; padding: 9px; }
 
-.hero{padding:90px 0 70px;min-height:640px;display:grid;grid-template-columns:1.18fr .82fr;align-items:center;gap:40px}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--site-primary);font-size:11px;font-weight:800;letter-spacing:.17em;text-transform:uppercase}
-.pulse{height:7px;width:7px;border-radius:50%;background:var(--site-primary);box-shadow:0 0 18px var(--site-primary);animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.35;transform:scale(.7)}}
-h1,h2,h3,p{margin-top:0}
-h1{font-size:clamp(44px,6.8vw,86px);line-height:.96;letter-spacing:-.075em;margin:22px 0;font-weight:850}
-h1 .outline{color:transparent;-webkit-text-stroke:1px #F3F5F8}
-.hero p{color:#AAB3C0;font-size:16px;line-height:1.8;max-width:560px}
-.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.meta-line{display:flex;gap:20px;flex-wrap:wrap;margin-top:36px;color:#818B9A;font-size:11px;letter-spacing:.07em;text-transform:uppercase}
-.meta-line span{display:flex;align-items:center;gap:7px}
-.meta-line i{width:5px;height:5px;background:#A3F7BF;border-radius:50%}
+.hero { padding: 90px 0 70px; min-height: 640px; display: grid; grid-template-columns: 1.18fr 0.82fr; align-items: center; gap: 40px; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--site-primary); font-size: 11px; font-weight: 800; letter-spacing: 0.17em; text-transform: uppercase; }
+.pulse { height: 7px; width: 7px; border-radius: 50%; background: var(--site-primary); box-shadow: 0 0 18px var(--site-primary); animation: pulse 2s infinite; }
+@keyframes pulse { 50% { opacity: 0.35; transform: scale(0.7); } }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(44px, 6.8vw, 86px); line-height: 0.96; letter-spacing: -0.075em; margin: 22px 0; font-weight: 850; }
+h1 .outline { color: transparent; -webkit-text-stroke: 1px #F3F5F8; }
+.hero p { color: #AAB3C0; font-size: 16px; line-height: 1.8; max-width: 560px; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+.meta-line { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 36px; color: #818B9A; font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; }
+.meta-line span { display: flex; align-items: center; gap: 7px; }
+.meta-line i { width: 5px; height: 5px; background: #A3F7BF; border-radius: 50%; }
 
-.hero-art{min-height:460px;position:relative;display:grid;place-items:center;perspective:1100px;user-select:none;}
-.halo-wrapper{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;}
-.halo{width:min(390px,92%);aspect-ratio:1;border-radius:50%;border:1px solid #A3F7BF4A;position:absolute;transform:rotateX(65deg) rotateZ(0deg);box-shadow:0 0 70px #A3F7BF0D,inset 0 0 60px #A3F7BF0D;transition:transform .12s ease-out;}
-.halo:before,.halo:after{content:"";position:absolute;inset:22px;border:1px solid #A3F7BF38;border-radius:50%}
-.halo:after{inset:48px;border-color:#9FAEFF45}
+.hero-art { min-height: 460px; position: relative; display: grid; place-items: center; perspective: 1100px; user-select: none; }
+.halo-wrapper { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; }
+.halo {
+  width: min(390px, 92%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #A3F7BF4A;
+  position: absolute;
+  transform: rotateX(65deg) rotateZ(0deg);
+  box-shadow: 0 0 70px #A3F7BF0D, inset 0 0 60px #A3F7BF0D;
+  transition: transform 0.12s ease-out;
+}
+.halo:before, .halo:after { content: ""; position: absolute; inset: 22px; border: 1px solid #A3F7BF38; border-radius: 50%; }
+.halo:after { inset: 48px; border-color: #9FAEFF45; }
 
-.core{width:235px;height:285px;border-radius:28px;border:1px solid #FFFFFF2B;background:linear-gradient(145deg,#1C2631E8,#10151EE8);box-shadow:0 35px 100px #0008,inset 0 1px #FFFFFF24;display:flex;flex-direction:column;justify-content:space-between;padding:24px;transform-style:preserve-3d;backdrop-filter:blur(20px);cursor:grab;will-change:transform;}
-.core:active{cursor:grabbing;}
-.core-top{display:flex;justify-content:space-between;color:#8E9AAA;font-size:10px;letter-spacing:.12em}
-.monogram{font-size:74px;font-weight:900;letter-spacing:-.1em;line-height:1;color:var(--site-primary);text-shadow:0 0 35px #A3F7BF44}
-.core-bottom{font-size:10px;color:#B5C0CC;line-height:1.6}
+.core {
+  width: 235px;
+  height: 285px;
+  border-radius: 28px;
+  border: 1px solid #FFFFFF2B;
+  background: linear-gradient(145deg, #1C2631E8, #10151EE8);
+  box-shadow: 0 35px 100px #0008, inset 0 1px #FFFFFF24;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  transform-style: preserve-3d;
+  backdrop-filter: blur(20px);
+  cursor: grab;
+  will-change: transform;
+}
+.core:active { cursor: grabbing; }
+.core-top { display: flex; justify-content: space-between; color: #8E9AAA; font-size: 10px; letter-spacing: 0.12em; }
+.monogram { font-size: 74px; font-weight: 900; letter-spacing: -0.1em; line-height: 1; color: var(--site-primary); text-shadow: 0 0 35px #A3F7BF44; }
+.core-bottom { font-size: 10px; color: #B5C0CC; line-height: 1.6; }
 
-.float-tag{position:absolute;border:1px solid #FFFFFF21;background:#10151DD9;backdrop-filter:blur(14px);border-radius:14px;padding:12px 16px;font-size:11px;color:#E7EDF5;box-shadow:0 14px 40px #0008;cursor:grab;touch-action:none;user-select:none;z-index:10;}
-.float-tag:active{cursor:grabbing;box-shadow:0 20px 50px #000B;border-color:var(--site-primary);}
-.float-tag strong{display:block;color:var(--site-primary);font-size:12px;margin-bottom:4px}
-.tag-a{top:45px;right:10px}
-.tag-b{bottom:45px;left:10px}
-.scroll-note{position:absolute;bottom:4px;left:50%;transform:translateX(-50%);color:#697484;font-size:9px;letter-spacing:.2em;white-space:nowrap}
+.float-tag {
+  position: absolute;
+  border: 1px solid #FFFFFF21;
+  background: #10151DD9;
+  backdrop-filter: blur(14px);
+  border-radius: 14px;
+  padding: 12px 16px;
+  font-size: 11px;
+  color: #E7EDF5;
+  box-shadow: 0 14px 40px #0008;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  z-index: 10;
+}
+.float-tag:active { cursor: grabbing; box-shadow: 0 20px 50px #000B; border-color: var(--site-primary); }
+.float-tag strong { display: block; color: var(--site-primary); font-size: 12px; margin-bottom: 4px; }
+.tag-a { top: 45px; right: 10px; }
+.tag-b { bottom: 45px; left: 10px; }
+.scroll-note { position: absolute; bottom: 4px; left: 50%; transform: translateX(-50%); color: #697484; font-size: 9px; letter-spacing: 0.2em; white-space: nowrap; }
 
-section{padding:86px 0;border-top:1px solid #FFFFFF12}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:36px}
-.kicker{color:var(--site-primary);font-size:10px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
-.section-head h2{font-size:clamp(30px,4vw,50px);letter-spacing:-.06em;line-height:1.05;margin:0}
-.section-head p{max-width:440px;color:#9AA5B3;font-size:13px;line-height:1.7;margin:0}
+section { padding: 86px 0; border-top: 1px solid #FFFFFF12; }
+.section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 36px; }
+.kicker { color: var(--site-primary); font-size: 10px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 12px; }
+.section-head h2 { font-size: clamp(30px, 4vw, 50px); letter-spacing: -0.06em; line-height: 1.05; margin: 0; }
+.section-head p { max-width: 440px; color: #9AA5B3; font-size: 13px; line-height: 1.7; margin: 0; }
 
-/* ABOUT SECTION: KPI DASHBOARD & EXECUTIVE BIO */
-.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:22px}
-.panel{background:linear-gradient(145deg,#161D27,#10151D);border:1px solid #FFFFFF14;border-radius:22px;padding:26px;position:relative}
-.big-stat{font-size:54px;font-weight:850;letter-spacing:-.07em;color:var(--site-primary)}
-.small-label{font-size:10px;color:#8C98A8;letter-spacing:.14em;text-transform:uppercase}
-.about-copy{color:#B1BBC8;font-size:14px;line-height:1.8}
-.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
-.pill{border:1px solid #FFFFFF1A;border-radius:999px;padding:8px 11px;font-size:10px;color:#C8D0DB;background:#FFFFFF04}
+/* ABOUT SECTION */
+.about-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 22px; }
+.panel { background: linear-gradient(145deg, #161D27, #10151D); border: 1px solid #FFFFFF14; border-radius: 22px; padding: 26px; position: relative; }
+.big-stat { font-size: 54px; font-weight: 850; letter-spacing: -0.07em; color: var(--site-primary); }
+.small-label { font-size: 10px; color: #8C98A8; letter-spacing: 0.14em; text-transform: uppercase; }
+.about-copy { color: #B1BBC8; font-size: 14px; line-height: 1.8; }
+.pill-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+.pill { border: 1px solid #FFFFFF1A; border-radius: 999px; padding: 8px 11px; font-size: 10px; color: #C8D0DB; background: #FFFFFF04; }
 
-.kpi-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px;}
-.kpi-card{background:#0C121B;border:1px solid #FFFFFF14;border-radius:16px;padding:16px 14px;position:relative;overflow:hidden;transition:all .25s ease;cursor:pointer;}
-.kpi-card:hover{border-color:var(--site-primary);transform:translateY(-3px);background:linear-gradient(145deg,#121B27,#0A0E15);box-shadow:0 12px 30px #0008;}
-.kpi-num{font-size:24px;font-weight:850;color:var(--site-primary);letter-spacing:-.04em;line-height:1.1;margin-bottom:6px;}
-.kpi-title{font-size:11px;font-weight:750;color:#F3F5F8;margin-bottom:3px;}
-.kpi-desc{font-size:10px;color:#8491A2;line-height:1.4;}
+.kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+.kpi-card { background: #0C121B; border: 1px solid #FFFFFF14; border-radius: 16px; padding: 16px 14px; position: relative; overflow: hidden; transition: all 0.25s ease; cursor: pointer; }
+.kpi-card:hover { border-color: var(--site-primary); transform: translateY(-3px); background: linear-gradient(145deg, #121B27, #0A0E15); box-shadow: 0 12px 30px #0008; }
+.kpi-num { font-size: 24px; font-weight: 850; color: var(--site-primary); letter-spacing: -0.04em; line-height: 1.1; margin-bottom: 6px; }
+.kpi-title { font-size: 11px; font-weight: 750; color: #F3F5F8; margin-bottom: 3px; }
+.kpi-desc { font-size: 10px; color: #8491A2; line-height: 1.4; }
 
-.exec-card{display:flex;flex-direction:column;justify-content:space-between;height:100%;}
-.exec-highlight{border-left:2px solid var(--site-primary);padding-left:14px;margin:18px 0;font-size:13px;line-height:1.75;color:#CCD5E1;}
-.exec-actions{display:flex;flex-direction:column;gap:10px;margin-top:22px;}
-.exec-btn{display:flex;align-items:center;justify-content:space-between;width:100%;padding:13px 18px;border-radius:12px;border:1px solid #FFFFFF20;background:#0B1017;color:#F3F5F8;font-size:12px;font-weight:700;transition:all .2s;text-decoration:none;}
-.exec-btn:hover{border-color:var(--site-primary);background:#131B26;color:var(--site-primary);transform:translateX(3px);}
-.copy-toast{font-size:11px;color:var(--site-primary);margin-top:6px;min-height:1.2em;display:none;}
+.exec-card { display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.exec-highlight { border-left: 2px solid var(--site-primary); padding-left: 14px; margin: 18px 0; font-size: 13px; line-height: 1.75; color: #CCD5E1; }
+.exec-actions { display: flex; flex-direction: column; gap: 10px; margin-top: 22px; }
+.exec-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 12px;
+  border: 1px solid #FFFFFF20;
+  background: #0B1017;
+  color: #F3F5F8;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+.exec-btn:hover { border-color: var(--site-primary); background: #131B26; color: var(--site-primary); transform: translateX(3px); }
+.copy-toast { font-size: 11px; color: var(--site-primary); margin-top: 6px; min-height: 1.2em; display: none; }
 
-.marquee-container{overflow:hidden;user-select:none;padding:14px 0;background:#060A0F;border-top:1px solid #FFFFFF0E;border-bottom:1px solid #FFFFFF0E;}
-.marquee-track{display:flex;width:max-content;gap:20px;will-change:transform;}
-.marquee-item{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;border:1px solid #FFFFFF15;background:#101620;font-size:11px;color:#C9D3E0;white-space:nowrap;}
-.marquee-item span{color:var(--site-primary);font-weight:800}
+.marquee-container { overflow: hidden; user-select: none; padding: 14px 0; background: #060A0F; border-top: 1px solid #FFFFFF0E; border-bottom: 1px solid #FFFFFF0E; }
+.marquee-track { display: flex; width: max-content; gap: 20px; will-change: transform; }
+.marquee-item { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 999px; border: 1px solid #FFFFFF15; background: #101620; font-size: 11px; color: #C9D3E0; white-space: nowrap; }
+.marquee-item span { color: var(--site-primary); font-weight: 800; }
 
 /* SKILLS GRID */
-.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.skill{padding:20px;border:1px solid #FFFFFF16;border-radius:16px;background:#111720;transition:all .25s;}
-.skill:hover{transform:translateY(-5px);border-color:var(--site-primary);background:#131C27}
-.skill b{font-size:13px;display:block;margin:10px 0 6px}
-.skill span{font-size:11px;color:#8E9AAA;line-height:1.5}
-.skill svg{color:var(--site-primary);width:24px;height:24px}
+.skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.skill { padding: 20px; border: 1px solid #FFFFFF16; border-radius: 16px; background: #111720; transition: all 0.25s; }
+.skill:hover { transform: translateY(-5px); border-color: var(--site-primary); background: #131C27; }
+.skill b { font-size: 13px; display: block; margin: 10px 0 6px; }
+.skill span { font-size: 11px; color: #8E9AAA; line-height: 1.5; }
+.skill svg { color: var(--site-primary); width: 24px; height: 24px; }
 
 /* TIMELINE */
-.timeline{position:relative;margin-left:8px;padding-left:26px;border-left:1px solid #FFFFFF20;display:grid;gap:18px}
-.time-item{position:relative;display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px;background:#111720;border:1px solid #FFFFFF12;border-radius:17px;transition:all .25s;}
-.time-item:hover{transform:translateX(6px);border-color:#A3F7BF66;background:#131B26}
-.time-item:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--site-primary);left:-31px;top:29px;box-shadow:0 0 16px #A3F7BF77}
-.time-date{font-size:10px;letter-spacing:.08em;color:var(--site-primary);text-transform:uppercase;padding-top:3px}
-.time-item h3{font-size:15px;margin:0 0 6px}
-.time-item p{font-size:12px;line-height:1.7;color:#A5AFBD;margin:0}
-.time-item .sub{color:#788595;font-size:11px;margin-bottom:8px}
+.timeline { position: relative; margin-left: 8px; padding-left: 26px; border-left: 1px solid #FFFFFF20; display: grid; gap: 18px; }
+.time-item { position: relative; display: grid; grid-template-columns: 150px 1fr; gap: 20px; padding: 22px; background: #111720; border: 1px solid #FFFFFF12; border-radius: 17px; transition: all 0.25s; }
+.time-item:hover { transform: translateX(6px); border-color: #A3F7BF66; background: #131B26; }
+.time-item:before { content: ""; position: absolute; width: 9px; height: 9px; border-radius: 50%; background: var(--site-primary); left: -31px; top: 29px; box-shadow: 0 0 16px #A3F7BF77; }
+.time-date { font-size: 10px; letter-spacing: 0.08em; color: var(--site-primary); text-transform: uppercase; padding-top: 3px; }
+.time-item h3 { font-size: 15px; margin: 0 0 6px; }
+.time-item p { font-size: 12px; line-height: 1.7; color: #A5AFBD; margin: 0; }
+.time-item .sub { color: #788595; font-size: 11px; margin-bottom: 8px; }
 
-/* CERTIFICATION CARDS */
-.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.cert-card{padding:22px;border:1px solid #FFFFFF16;border-radius:18px;background:linear-gradient(145deg,#131A24,#0E131A);transition:all .25s;}
-.cert-card:hover{transform:translateY(-4px);border-color:var(--site-primary);box-shadow:0 12px 30px #0008;}
-.cert-date{font-size:10px;letter-spacing:.12em;color:var(--site-primary);text-transform:uppercase;font-weight:750;}
-.cert-card h3{font-size:16px;margin:10px 0 6px;letter-spacing:-.03em;}
-.cert-org{font-size:11px;color:#8B98AA;line-height:1.5;}
+/* CERTIFICATIONS */
+.cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.cert-card { padding: 22px; border: 1px solid #FFFFFF16; border-radius: 18px; background: linear-gradient(145deg, #131A24, #0E131A); transition: all 0.25s; }
+.cert-card:hover { transform: translateY(-4px); border-color: var(--site-primary); box-shadow: 0 12px 30px #0008; }
+.cert-date { font-size: 10px; letter-spacing: 0.12em; color: var(--site-primary); text-transform: uppercase; font-weight: 750; }
+.cert-card h3 { font-size: 16px; margin: 10px 0 6px; letter-spacing: -0.03em; }
+.cert-org { font-size: 11px; color: #8B98AA; line-height: 1.5; }
 
 /* HYBRID 3D PROJECT TILES */
-.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-.project{border:1px solid #FFFFFF17;border-radius:22px;overflow:hidden;background:#111720;transform-style:preserve-3d;perspective:900px;transition:border-color .3s, box-shadow .3s;position:relative;isolation:isolate}
-.project:before{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:radial-gradient(420px circle at var(--spot-x,50%) var(--spot-y,50%),rgba(163,247,191,0.18),transparent 65%);opacity:0;transition:opacity .3s;}
-.project:hover:before{opacity:1;}
+.projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; }
+.project {
+  border: 1px solid #FFFFFF17;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #111720;
+  transform-style: preserve-3d;
+  perspective: 900px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  position: relative;
+  isolation: isolate;
+}
+.project:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  pointer-events: none;
+  background: radial-gradient(420px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(163, 247, 191, 0.18), transparent 65%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project:hover:before { opacity: 1; }
 
-.project-visual{height:250px;padding:18px;position:relative;overflow:hidden;background:linear-gradient(135deg,#141C24,#0B0E14);display:flex;flex-direction:column;justify-content:space-between;}
-.visual-label-bar{display:flex;justify-content:space-between;align-items:center;z-index:2;position:relative;}
-.visual-label{font-size:10px;letter-spacing:.14em;color:#A9B6C7;text-transform:uppercase;font-weight:700;}
-.zoom-hint{font-size:10px;color:var(--site-primary);cursor:pointer;background:#05080EBB;padding:4px 8px;border-radius:6px;border:1px solid #FFFFFF18;}
+.project-visual { height: 250px; padding: 18px; position: relative; overflow: hidden; background: linear-gradient(135deg, #141C24, #0B0E14); display: flex; flex-direction: column; justify-content: space-between; }
+.visual-label-bar { display: flex; justify-content: space-between; align-items: center; z-index: 2; position: relative; }
+.visual-label { font-size: 10px; letter-spacing: 0.14em; color: #A9B6C7; text-transform: uppercase; font-weight: 700; }
+.zoom-hint { font-size: 10px; color: var(--site-primary); cursor: pointer; background: #05080EBB; padding: 4px 8px; border-radius: 6px; border: 1px solid #FFFFFF18; }
 
-.mock-window{position:relative;height:185px;width:100%;background:#06090F;border:1px solid #FFFFFF2E;border-radius:12px;overflow:hidden;box-shadow:0 18px 45px #000B;cursor:zoom-in;transition:transform .4s cubic-bezier(.2,.8,.2,1);}
-.project:hover .mock-window{transform:translateY(-4px) scale(1.02);}
-.mock-window img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;}
+.mock-window {
+  position: relative;
+  height: 185px;
+  width: 100%;
+  background: #06090F;
+  border: 1px solid #FFFFFF2E;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px #000B;
+  cursor: zoom-in;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.project:hover .mock-window { transform: translateY(-4px) scale(1.02); }
+.mock-window img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 
-.project-body{padding:22px;position:relative;z-index:3;}
-.project-title-row{display:flex;justify-content:space-between;gap:12px;align-items:start}
-.project h3{font-size:19px;letter-spacing:-.04em;margin:0 0 9px}
-.project p{color:#9FAAB8;font-size:12px;line-height:1.7;margin-bottom:14px}
-.project-link{border:1px solid #FFFFFF25;background:transparent;color:#EAF0F6;border-radius:50%;width:34px;height:34px;display:grid;place-items:center;}
-.project-link:hover{background:var(--site-primary);color:#07110B}
-.text-link{font-size:11px;color:var(--site-primary);border-bottom:1px solid #A3F7BF55;padding-bottom:3px}
+.project-body { padding: 22px; position: relative; z-index: 3; }
+.project-title-row { display: flex; justify-content: space-between; gap: 12px; align-items: flex-start; }
+.project h3 { font-size: 19px; letter-spacing: -0.04em; margin: 0 0 9px; }
+.project p { color: #9FAAB8; font-size: 12px; line-height: 1.7; margin-bottom: 14px; }
+.project-link { border: 1px solid #FFFFFF25; background: transparent; color: #EAF0F6; border-radius: 50%; width: 34px; height: 34px; display: grid; place-items: center; }
+.project-link:hover { background: var(--site-primary); color: #07110B; }
+.text-link { font-size: 11px; color: var(--site-primary); border-bottom: 1px solid #A3F7BF55; padding-bottom: 3px; }
 
-.tile-interactive-strip{background:#090E16;border:1px solid #FFFFFF15;border-radius:12px;padding:10px 14px;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
-.mini-btn{background:#161F2C;border:1px solid #FFFFFF20;color:var(--site-primary);border-radius:6px;padding:6px 11px;font-size:10px;font-weight:750;}
-.mini-btn:hover{background:var(--site-primary);color:#07110B;}
-.mini-readout{font-size:11px;font-family:monospace;font-weight:800;color:#F3F5F8;}
-.sparkline{width:100%;height:38px;stroke:var(--site-primary);stroke-width:2;fill:none;stroke-linecap:round;}
+.tile-interactive-strip {
+  background: #090E16;
+  border: 1px solid #FFFFFF15;
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.mini-btn { background: #161F2C; border: 1px solid #FFFFFF20; color: var(--site-primary); border-radius: 6px; padding: 6px 11px; font-size: 10px; font-weight: 750; }
+.mini-btn:hover { background: var(--site-primary); color: #07110B; }
+.mini-readout { font-size: 11px; font-family: monospace; font-weight: 800; color: #F3F5F8; }
+.sparkline { width: 100%; height: 38px; stroke: var(--site-primary); stroke-width: 2; fill: none; stroke-linecap: round; }
 
 /* INTERESTS & CONTACT */
-.interests-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.interest-card{padding:24px;border:1px solid #FFFFFF14;border-radius:20px;background:#111720;}
-.interest-card h3{font-size:17px;margin:8px 0 10px;color:#F3F5F8;}
-.interest-card p{font-size:12.5px;color:#9EABB9;line-height:1.7;margin:0;}
+.interests-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.interest-card { padding: 24px; border: 1px solid #FFFFFF14; border-radius: 20px; background: #111720; }
+.interest-card h3 { font-size: 17px; margin: 8px 0 10px; color: #F3F5F8; }
+.interest-card p { font-size: 12.5px; color: #9EABB9; line-height: 1.7; margin: 0; }
 
-.contact-panel{background:linear-gradient(125deg,#15241E,#141B2B 70%);border:1px solid #A3F7BF32;border-radius:26px;padding:clamp(26px,5vw,54px);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
-.contact-panel h2{font-size:clamp(32px,5vw,58px);letter-spacing:-.06em;line-height:1;margin:12px 0}
-.contact-panel p{color:#AEB9C5;font-size:13px;line-height:1.7;max-width:520px;margin:0}
-.contact-buttons{display:flex;flex-direction:column;gap:10px;min-width:180px}
-.contact-buttons a{text-align:center}
-.contact-note{font-size:10px;color:#798697;margin-top:18px}
-footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;color:#6F7A89;font-size:10px}
+.contact-panel {
+  background: linear-gradient(125deg, #15241E, #141B2B 70%);
+  border: 1px solid #A3F7BF32;
+  border-radius: 26px;
+  padding: clamp(26px, 5vw, 54px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 28px;
+  align-items: center;
+}
+.contact-panel h2 { font-size: clamp(32px, 5vw, 58px); letter-spacing: -0.06em; line-height: 1; margin: 12px 0; }
+.contact-panel p { color: #AEB9C5; font-size: 13px; line-height: 1.7; max-width: 520px; margin: 0; }
+.contact-buttons { display: flex; flex-direction: column; gap: 10px; min-width: 180px; }
+.contact-buttons a { text-align: center; }
+.contact-note { font-size: 10px; color: #798697; margin-top: 18px; }
+footer { padding: 25px 0 36px; display: flex; justify-content: space-between; gap: 15px; color: #6F7A89; font-size: 10px; }
 
-#motionCanvas{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:.7}
-.cursor-glow{position:fixed;left:0;top:0;width:240px;height:240px;border-radius:50%;pointer-events:none;z-index:2;background:radial-gradient(circle,#A3F7BF18,transparent 70%);transform:translate(-50%,-50%);transition:opacity .2s;opacity:.8}
+#motionCanvas { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; opacity: 0.7; }
+.cursor-glow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(circle, #A3F7BF18, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s;
+  opacity: 0.8;
+}
 
-.utility-dock{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;gap:8px;align-items:center}
-.utility-button{border:1px solid #FFFFFF2C;background:#10151DEB;color:#F3F5F8;border-radius:999px;padding:11px 15px;font-size:11px;backdrop-filter:blur(14px);box-shadow:0 8px 30px #0008;transition:all .2s;}
-.utility-button:hover{border-color:var(--site-primary);transform:translateY(-2px)}
-#readingProgress{position:fixed;top:0;left:0;height:3px;width:0;background:var(--site-primary);z-index:100;box-shadow:0 0 14px var(--site-primary)}
+.utility-dock { position: fixed; right: 18px; bottom: 18px; z-index: 40; display: flex; gap: 8px; align-items: center; }
+.utility-button {
+  border: 1px solid #FFFFFF2C;
+  background: #10151DEB;
+  color: #F3F5F8;
+  border-radius: 999px;
+  padding: 11px 15px;
+  font-size: 11px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px #0008;
+  transition: all 0.2s;
+}
+.utility-button:hover { border-color: var(--site-primary); transform: translateY(-2px); }
+#readingProgress { position: fixed; top: 0; left: 0; height: 3px; width: 0; background: var(--site-primary); z-index: 100; box-shadow: 0 0 14px var(--site-primary); }
 
-/* LIGHTBOX MODAL & COMMAND PALETTE */
-#commandPalette, #crisisModal, #imageLightbox{width:min(720px,calc(100% - 28px));padding:0;border:1px solid #FFFFFF28;border-radius:22px;background:#10151D;color:#F3F5F8;box-shadow:0 30px 100px #000D}
-#imageLightbox{width:min(980px,calc(100% - 28px));}
-#commandPalette::backdrop, #crisisModal::backdrop, #imageLightbox::backdrop{background:#02050BD9;backdrop-filter:blur(8px)}
-.modal-head{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid #FFFFFF18}
-.modal-content{padding:24px}
-.modal-close{background:transparent;border:1px solid #FFFFFF2C;color:#F3F5F8;border-radius:999px;padding:8px 14px}
-.lightbox-img-box{padding:18px;max-height:75vh;overflow:auto;display:flex;justify-content:center;background:#05070C;}
-.lightbox-img-box img{width:100%;height:auto;border-radius:8px;border:1px solid #FFFFFF1C;}
-.palette-top{display:flex;gap:10px;padding:18px;border-bottom:1px solid #FFFFFF18}
-.palette-top input{flex:1;background:transparent;border:0;outline:none;color:#F3F5F8;font:inherit}
-.palette-results{padding:8px;max-height:50vh;overflow-y:auto}
-.palette-result{width:100%;display:flex;justify-content:space-between;border:0;background:transparent;color:#E9EEF5;border-radius:12px;padding:13px 14px;text-align:left;}
-.palette-result:hover{background:#FFFFFF10;color:var(--site-primary)}
+/* LIGHTBOX & MODALS */
+#crisisModal, #imageLightbox { width: min(720px, calc(100% - 28px)); padding: 0; border: 1px solid #FFFFFF28; border-radius: 22px; background: #10151D; color: #F3F5F8; box-shadow: 0 30px 100px #000D; }
+#imageLightbox { width: min(980px, calc(100% - 28px)); }
+#crisisModal::backdrop, #imageLightbox::backdrop, #commandPalette::backdrop { background: #02050BD9; backdrop-filter: blur(8px); }
+.modal-head { display: flex; justify-content: space-between; align-items: center; padding: 18px 22px; border-bottom: 1px solid #FFFFFF18; }
+.modal-content { padding: 24px; }
+.modal-close { background: transparent; border: 1px solid #FFFFFF2C; color: #F3F5F8; border-radius: 999px; padding: 8px 14px; }
+.lightbox-img-box { padding: 18px; max-height: 75vh; overflow: auto; display: flex; justify-content: center; background: #05070C; }
+.lightbox-img-box img { width: 100%; height: auto; border-radius: 8px; border: 1px solid #FFFFFF1C; }
 
-@media(max-width:960px){
- nav{display:none;position:absolute;top:71px;left:0;right:0;padding:18px 22px;background:#090C12;border-bottom:1px solid #FFFFFF20;flex-direction:column;align-items:flex-start}
- nav.open{display:flex}.menu{display:block}.nav-cta{display:none}
- .hero{grid-template-columns:1fr;padding-top:60px}
- .projects{grid-template-columns:1fr}
- .skills-grid{grid-template-columns:repeat(2,1fr)}
- .cert-grid{grid-template-columns:1fr}
- .interests-grid{grid-template-columns:1fr}
- .time-item{grid-template-columns:1fr}
- .contact-panel{grid-template-columns:1fr}
- .about-grid{grid-template-columns:1fr}
+/* COMMAND PALETTE POPUP STYLES */
+#commandPalette {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  max-width: 580px;
+  width: min(580px, calc(100% - 32px));
+  background: #10151D;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 18px;
+  overflow: hidden;
+  z-index: 9999;
+  padding: 0;
+  color: #F3F5F8;
+  box-shadow: 0 30px 100px #000D;
+}
+.palette-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0B0F16;
+}
+.palette-top input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #F3F5F8;
+  font-family: inherit;
+}
+.palette-results {
+  max-height: 340px;
+  overflow-y: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.palette-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 11px 14px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  color: #E2E8F0;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.18s;
+}
+.palette-result:hover {
+  background: rgba(163, 247, 191, 0.1);
+  border-color: var(--site-primary);
+  color: var(--site-primary);
+}
+
+@media (max-width: 960px) {
+  nav {
+    display: none;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 20px 24px;
+    background: #090C12FA;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    z-index: 100;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  }
+  nav.open { display: flex !important; }
+  .menu { display: block; cursor: pointer; font-size: 18px; line-height: 1; z-index: 101; }
+  .nav-cta { display: none; }
+  .hero { grid-template-columns: 1fr; padding-top: 60px; }
+  .projects { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .cert-grid { grid-template-columns: 1fr; }
+  .interests-grid { grid-template-columns: 1fr; }
+  .time-item { grid-template-columns: 1fr; }
+  .contact-panel { grid-template-columns: 1fr; }
+  .about-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -252,14 +527,14 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 
 <div class="marquee-container" id="marqueeBar">
   <div class="marquee-track" id="marqueeTrack">
-    <div class="marquee-item"><span>01</span> M.COM ACCOUNTING & FINANCE</div>
-    <div class="marquee-item"><span>02</span> CMA INTERMEDIATE (GROUP I COMPLETED)</div>
-    <div class="marquee-item"><span>03</span> FINANCIAL STATEMENT & RATIO ANALYSIS</div>
-    <div class="marquee-item"><span>04</span> EXCEL & TALLY PRIME REPORTING</div>
-    <div class="marquee-item"><span>05</span> AI-ASSISTED WEB APP ENGINEERING</div>
-    <div class="marquee-item"><span>06</span> EMPIRICAL BANKING RESEARCH PUBLICATION</div>
-    <div class="marquee-item"><span>01</span> M.COM ACCOUNTING & FINANCE</div>
-    <div class="marquee-item"><span>02</span> CMA INTERMEDIATE (GROUP I COMPLETED)</div>
+    <div class="marquee-item"><span>01</span> M.COM ACCOUNTING & FINANCE[span_0](start_span)[span_0](end_span)</div>
+    <div class="marquee-item"><span>02</span> CMA INTERMEDIATE (GROUP I COMPLETED)[span_1](start_span)[span_1](end_span)</div>
+    <div class="marquee-item"><span>03</span> FINANCIAL STATEMENT & RATIO ANALYSIS[span_2](start_span)[span_2](end_span)</div>
+    <div class="marquee-item"><span>04</span> EXCEL & TALLY PRIME REPORTING[span_3](start_span)[span_3](end_span)</div>
+    <div class="marquee-item"><span>05</span> AI-ASSISTED WEB APP ENGINEERING[span_4](start_span)[span_4](end_span)</div>
+    <div class="marquee-item"><span>06</span> EMPIRICAL BANKING RESEARCH PUBLICATION[span_5](start_span)[span_5](end_span)</div>
+    <div class="marquee-item"><span>01</span> M.COM ACCOUNTING & FINANCE[span_6](start_span)[span_6](end_span)</div>
+    <div class="marquee-item"><span>02</span> CMA INTERMEDIATE (GROUP I COMPLETED)[span_7](start_span)[span_7](end_span)</div>
   </div>
 </div>
 
@@ -269,14 +544,14 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
   <div class="hero-copy">
     <div class="eyebrow"><span class="pulse"></span> ACCOUNTING & FINANCE | FINANCIAL ANALYSIS | AI-ASSISTED DIGITAL BUILDING</div>
     <h1>Akash<br><span class="outline">Gokulakrishnan.</span></h1>
-    <p>Commerce postgraduate specializing in Accounting and Finance and pursuing CMA Intermediate. Skilled in financial statement analysis, ratio analysis, and Excel-based reporting with hands-on exposure to Tally Prime, complemented by practical experience in AI-assisted website and web application development.</p>
+    <p>Commerce postgraduate specializing in Accounting and Finance and pursuing CMA Intermediate[span_8](start_span)[span_8](end_span). Skilled in financial statement analysis, ratio analysis, and Excel-based reporting with hands-on exposure to Tally Prime[span_9](start_span)[span_9](end_span), complemented by practical experience in AI-assisted website and web application development[span_10](start_span)[span_10](end_span).</p>
     <div class="actions">
       <a class="btn primary" href="#about">Explore Portfolio ↘</a>
-      <a class="btn" href="#education">View Qualifications ↗</a>
+      <a class="btn" href="#education">View Qualifications ↗[span_11](start_span)[span_11](end_span)</a>
     </div>
     <div class="meta-line">
-      <span><i></i> M.Com (Accounting & Finance) — 82.18%</span>
-      <span><i></i> CMA Intermediate (Group I Completed)</span>
+      <span><i></i> M.Com (Accounting & Finance) — 82.18%[span_12](start_span)[span_12](end_span)</span>
+      <span><i></i> CMA Intermediate (Group I Completed)[span_13](start_span)[span_13](end_span)</span>
     </div>
   </div>
 
@@ -289,8 +564,8 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
       <div class="monogram">AG.</div>
       <div class="core-bottom">FINANCE MINDED.<br>TECHNOLOGY CURIOUS.<br>BUILT WITH PURPOSE.</div>
     </div>
-    <div class="float-tag tag-a" id="badgeA"><strong>01 / CORE FINANCE</strong>Statements · Ratios · CMA Inter</div>
-    <div class="float-tag tag-b" id="badgeB"><strong>02 / COMPLEMENTARY BUILD</strong>AI-Assisted Web Apps</div>
+    <div class="float-tag tag-a" id="badgeA"><strong>01 / CORE FINANCE[span_14](start_span)[span_14](end_span)</strong>Statements · Ratios · CMA Inter[span_15](start_span)[span_15](end_span)</div>
+    <div class="float-tag tag-b" id="badgeB"><strong>02 / COMPLEMENTARY BUILD[span_16](start_span)[span_16](end_span)</strong>AI-Assisted Web Apps[span_17](start_span)[span_17](end_span)</div>
     <div class="scroll-note">TILT MOUSE / DRAG BADGES ↓</div>
   </div>
 </section>
@@ -299,44 +574,44 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="about">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">01 — PROFILE</div><h2>About Me.</h2></div>
-      <p>Grounding analytical financial decision-making with practical digital tool exploration.</p>
+      <div><div class="kicker">01 — PROFILE[span_18](start_span)[span_18](end_span)</div><h2>About Me.</h2></div>
+      <p>Grounding analytical financial decision-making with practical digital tool exploration[span_19](start_span)[span_19](end_span).</p>
     </div>
     <div class="about-grid">
       
       <!-- LEFT PANEL: VERIFIED KPI DASHBOARD -->
       <div class="panel">
-        <div class="small-label">ACADEMIC & BUILD METRICS</div>
-        <div class="big-stat" style="font-size:42px;margin:8px 0 16px;">F × T</div>
-        <p class="about-copy">Applying financial rigor to analyze operational efficiency and solve administrative bottlenecks through digital tools.</p>
+        <div class="small-label">ACADEMIC & BUILD METRICS[span_20](start_span)[span_20](end_span)</div>
+        <div class="big-stat" style="font-size:42px;margin:8px 0 16px;">F × T[span_21](start_span)[span_21](end_span)</div>
+        <p class="about-copy">Applying financial rigor to analyze operational efficiency and solve administrative bottlenecks through digital tools[span_22](start_span)[span_22](end_span)[span_23](start_span)[span_23](end_span).</p>
         
         <div class="kpi-grid">
           <div class="kpi-card" id="kpiMcom">
-            <div class="kpi-num">82.18%</div>
-            <div class="kpi-title">M.Com Aggregate</div>
-            <div class="kpi-desc">CGPA 8.2 across semesters at Ramakrishna Mission Vivekananda College</div>
+            <div class="kpi-num">82.18%[span_24](start_span)[span_24](end_span)[span_25](start_span)[span_25](end_span)</div>
+            <div class="kpi-title">M.Com Aggregate[span_26](start_span)[span_26](end_span)[span_27](start_span)[span_27](end_span)</div>
+            <div class="kpi-desc">CGPA 8.2 across semesters at Ramakrishna Mission Vivekananda College[span_28](start_span)[span_28](end_span)[span_29](start_span)[span_29](end_span)</div>
           </div>
           <div class="kpi-card" id="kpiCma">
-            <div class="kpi-num">Group I</div>
-            <div class="kpi-title">CMA Intermediate</div>
-            <div class="kpi-desc">Completed ICAI Group I; Group II currently in progress</div>
+            <div class="kpi-num">Group I[span_30](start_span)[span_30](end_span)[span_31](start_span)[span_31](end_span)</div>
+            <div class="kpi-title">CMA Intermediate[span_32](start_span)[span_32](end_span)[span_33](start_span)[span_33](end_span)</div>
+            <div class="kpi-desc">Completed ICAI Group I; Group II currently in progress[span_34](start_span)[span_34](end_span)[span_35](start_span)[span_35](end_span)</div>
           </div>
           <div class="kpi-card" id="kpiSystems">
-            <div class="kpi-num">8+ Apps</div>
-            <div class="kpi-title">Web Applications</div>
-            <div class="kpi-desc">Deployed using AI-assisted workflows and Google Apps Script</div>
+            <div class="kpi-num">8+ Apps[span_36](start_span)[span_36](end_span)</div>
+            <div class="kpi-title">Web Applications[span_37](start_span)[span_37](end_span)</div>
+            <div class="kpi-desc">Deployed using AI-assisted workflows and Google Apps Script[span_38](start_span)[span_38](end_span)</div>
           </div>
           <div class="kpi-card" id="kpiPaper">
-            <div class="kpi-num">1 Paper</div>
-            <div class="kpi-title">Conference Study</div>
-            <div class="kpi-desc">Primary survey on AI-enabled SBI YONO services published in proceedings</div>
+            <div class="kpi-num">1 Paper[span_39](start_span)[span_39](end_span)[span_40](start_span)[span_40](end_span)</div>
+            <div class="kpi-title">Conference Study[span_41](start_span)[span_41](end_span)[span_42](start_span)[span_42](end_span)</div>
+            <div class="kpi-desc">Primary survey on AI-enabled SBI YONO services published in proceedings[span_43](start_span)[span_43](end_span)[span_44](start_span)[span_44](end_span)</div>
           </div>
         </div>
 
         <div class="pill-row">
-          <span class="pill">Financial Statement Analysis</span>
-          <span class="pill">Ratio Analysis</span>
-          <span class="pill">AI-Assisted Development</span>
+          <span class="pill">Financial Statement Analysis[span_45](start_span)[span_45](end_span)</span>
+          <span class="pill">Ratio Analysis[span_46](start_span)[span_46](end_span)</span>
+          <span class="pill">AI-Assisted Development[span_47](start_span)[span_47](end_span)</span>
         </div>
       </div>
 
@@ -344,29 +619,29 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
       <div class="panel">
         <div class="exec-card">
           <div>
-            <div class="small-label">EXECUTIVE SUMMARY</div>
+            <div class="small-label">EXECUTIVE SUMMARY[span_48](start_span)[span_48](end_span)</div>
             <div class="exec-highlight">
-              "Commerce postgraduate specializing in Accounting and Finance, seeking a role in Finance and Accounting Operations to deliver accurate, data-driven financial insights."
+              "Commerce postgraduate specializing in Accounting and Finance, seeking a role in Finance and Accounting Operations to deliver accurate, data-driven financial insights.[span_49](start_span)"[span_49](end_span)
             </div>
             <p class="about-copy">
-              My core academic and professional foundation is firmly rooted in Accounting and Finance. Supported by CMA Intermediate studies, undergraduate distinction, and empirical banking research, I bring structured analytical thinking to financial statements.
+              My core academic and professional foundation is firmly rooted in Accounting and Finance[span_50](start_span)[span_50](end_span). Supported by CMA Intermediate studies[span_51](start_span)[span_51](end_span), undergraduate distinction[span_52](start_span)[span_52](end_span), and empirical banking research[span_53](start_span)[span_53](end_span), I bring structured analytical thinking to financial statements[span_54](start_span)[span_54](end_span).
             </p>
             <p class="about-copy">
-              Alongside finance, I cultivate an active practical interest in developing websites and web applications with the support of AI tools and Google Apps Script, building operational dashboards and tracking systems for departmental and personal workflows.
+              Alongside finance, I cultivate an active practical interest in developing websites and web applications with the support of AI tools and Google Apps Script[span_55](start_span)[span_55](end_span), building operational dashboards and tracking systems for departmental and personal workflows[span_56](start_span)[span_56](end_span).
             </p>
           </div>
 
           <div class="exec-actions">
             <button class="exec-btn" id="btnCopySummary" type="button">
-              <span>📋 Copy 2-Line Recruiter Summary</span>
+              <span>📋 Copy 2-Line Recruiter Summary[span_57](start_span)[span_57](end_span)</span>
               <span>→</span>
             </button>
             <a class="exec-btn" href="#education">
-              <span>🎓 View Academic & CMA Credentials</span>
+              <span>🎓 View Academic & CMA Credentials[span_58](start_span)[span_58](end_span)[span_59](start_span)[span_59](end_span)</span>
               <span>↘</span>
             </a>
             <a class="exec-btn email-trigger" href="https://mail.google.com/mail/?view=cm&fs=1&to=akashgokul06@gmail.com&su=CV%20Request%20-%20Akash%20Gokulakrishnan" target="_blank" rel="noreferrer">
-              <span>📄 Request Full Curriculum Vitae (PDF)</span>
+              <span>📄 Request Full Curriculum Vitae (PDF)[span_60](start_span)[span_60](end_span)</span>
               <span>↗</span>
             </a>
             <div class="copy-toast" id="copyToast">✓ 2-Line summary copied to clipboard!</div>
@@ -382,49 +657,49 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="skills">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">02 — SKILLS</div><h2>Core Competencies.</h2></div>
-      <p>Distinguishing practical operational finance tools from research and software exposure.</p>
+      <div><div class="kicker">02 — SKILLS[span_61](start_span)[span_61](end_span)</div><h2>Core Competencies.[span_62](start_span)[span_62](end_span)</h2></div>
+      <p>Distinguishing practical operational finance tools from research and software exposure[span_63](start_span)[span_63](end_span).</p>
     </div>
     <div class="skills-grid">
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16M13 9v11M3 14h18"/></svg>
-        <b>Microsoft Excel</b>
-        <span>Skilled in spreadsheet-based reporting, financial data modeling, and analysis.</span>
+        <b>Microsoft Excel[span_64](start_span)[span_64](end_span)</b>
+        <span>Skilled in spreadsheet-based reporting, financial data modeling, and analysis[span_65](start_span)[span_65](end_span).</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="7" y="8" width="10" height="8" rx="1"/><path d="M4 19V5M4 19h17"/></svg>
-        <b>Tally Prime</b>
-        <span>Hands-on exposure to ledger bookkeeping, vouchers, and trial balance reporting.</span>
+        <b>Tally Prime[span_66](start_span)[span_66](end_span)</b>
+        <span>Hands-on exposure to ledger bookkeeping, vouchers, and trial balance reporting[span_67](start_span)[span_67](end_span).</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5M4 19h17M7 15l4-4 3 2 5-7"/></svg>
-        <b>Financial Analysis</b>
-        <span>Evaluating corporate liquidity, profitability, solvency, and operational efficiency ratios.</span>
+        <b>Financial Analysis[span_68](start_span)[span_68](end_span)</b>
+        <span>Evaluating corporate liquidity, profitability, solvency, and operational efficiency ratios[span_69](start_span)[span_69](end_span).</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m16 16 5 5"/></svg>
-        <b>SPSS Statistical Analysis</b>
-        <span>Exposure to hypothesis testing, descriptive statistics, ANOVA, and survey evaluation.</span>
+        <b>SPSS Statistical Analysis[span_70](start_span)[span_70](end_span)</b>
+        <span>Exposure to hypothesis testing, descriptive statistics, ANOVA, and survey evaluation[span_71](start_span)[span_71](end_span).</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/></svg>
-        <b>AI-Assisted Web Dev</b>
-        <span>Leveraging AI workflows to architect and launch functional web apps and digital tools.</span>
+        <b>AI-Assisted Web Dev[span_72](start_span)[span_72](end_span)</b>
+        <span>Leveraging AI workflows to architect and launch functional web apps and digital tools[span_73](start_span)[span_73](end_span).</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 6 3 12l5 6M16 6l5 6-5 6M14 4l-4 16"/></svg>
-        <b>Google Apps Script</b>
-        <span>Developing automated web application forms, triggers, and Sheets data tracking.</span>
+        <b>Google Apps Script[span_74](start_span)[span_74](end_span)</b>
+        <span>Developing automated web application forms, triggers, and Sheets data tracking[span_75](start_span)[span_75](end_span).</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-        <b>Taxation & Banking Training</b>
-        <span>Practical understanding of GST, Income Tax practice, and Finacle core banking modules.</span>
+        <b>Taxation & Banking Training[span_76](start_span)[span_76](end_span)</b>
+        <span>Practical understanding of GST, Income Tax practice, and Finacle core banking modules[span_77](start_span)[span_77](end_span).</span>
       </div>
       <div class="skill">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        <b>Operational Leadership</b>
-        <span>Event coordination, participant desk logistics, and structured industrial analysis.</span>
+        <b>Operational Leadership[span_78](start_span)[span_78](end_span)</b>
+        <span>Event coordination, participant desk logistics, and structured industrial analysis[span_79](start_span)[span_79](end_span).</span>
       </div>
     </div>
   </div>
@@ -434,48 +709,48 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="education">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">03 — ACADEMICS</div><h2>Education & Qualifications.</h2></div>
-      <p>Verified academic qualifications and professional examinations in reverse chronological order.</p>
+      <div><div class="kicker">03 — ACADEMICS[span_80](start_span)[span_80](end_span)</div><h2>Education & Qualifications.[span_81](start_span)[span_81](end_span)</h2></div>
+      <p>Verified academic qualifications and professional examinations in reverse chronological order[span_82](start_span)[span_82](end_span).</p>
     </div>
     <div class="timeline">
       <div class="time-item">
-        <div class="time-date">Currently Pursuing</div>
+        <div class="time-date">Currently Pursuing[span_83](start_span)[span_83](end_span)</div>
         <div>
-          <h3>Master of Commerce (Accounting & Finance)</h3>
-          <div class="sub">Ramakrishna Mission Vivekananda College (Autonomous), Evening College, Chennai</div>
-          <p>CGPA 8.2 (through Semester 2) | 82.18%</p>
+          <h3>Master of Commerce (Accounting & Finance)[span_84](start_span)[span_84](end_span)</h3>
+          <div class="sub">Ramakrishna Mission Vivekananda College (Autonomous), Evening College, Chennai[span_85](start_span)[span_85](end_span)</div>
+          <p>CGPA 8.2 (through Semester 2) | 82.18%[span_86](start_span)[span_86](end_span)</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">June 2023 – Dec 2025</div>
+        <div class="time-date">June 2023 – Dec 2025[span_87](start_span)[span_87](end_span)</div>
         <div>
-          <h3>CMA Intermediate</h3>
-          <div class="sub">The Institute of Cost Accountants of India</div>
-          <p>Group I: Completed | Group II: In Progress</p>
+          <h3>CMA Intermediate[span_88](start_span)[span_88](end_span)</h3>
+          <div class="sub">The Institute of Cost Accountants of India[span_89](start_span)[span_89](end_span)</div>
+          <p>Group I: Completed | Group II: In Progress[span_90](start_span)[span_90](end_span)</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">April 2023</div>
+        <div class="time-date">April 2023[span_91](start_span)[span_91](end_span)</div>
         <div>
-          <h3>Bachelor of Commerce — First Class with Distinction</h3>
-          <div class="sub">Guru Nanak College (Autonomous), Evening College, Chennai</div>
-          <p>CGPA 7.665 | 74.04%</p>
+          <h3>Bachelor of Commerce — First Class with Distinction[span_92](start_span)[span_92](end_span)</h3>
+          <div class="sub">Guru Nanak College (Autonomous), Evening College, Chennai[span_93](start_span)[span_93](end_span)</div>
+          <p>CGPA 7.665 | 74.04%[span_94](start_span)[span_94](end_span)</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2020</div>
+        <div class="time-date">March 2020[span_95](start_span)[span_95](end_span)</div>
         <div>
-          <h3>All India Senior School Certificate Examination (CBSE XII)</h3>
-          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School</div>
-          <p>76.4%</p>
+          <h3>All India Senior School Certificate Examination (CBSE XII)[span_96](start_span)[span_96](end_span)</h3>
+          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School[span_97](start_span)[span_97](end_span)</div>
+          <p>76.4%[span_98](start_span)[span_98](end_span)</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2018</div>
+        <div class="time-date">March 2018[span_99](start_span)[span_99](end_span)</div>
         <div>
-          <h3>All India Secondary School Examination (CBSE X)</h3>
-          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School</div>
-          <p>72.2%</p>
+          <h3>All India Secondary School Examination (CBSE X)[span_100](start_span)[span_100](end_span)</h3>
+          <div class="sub">Sri R.M. Jain Vidhyashram Senior Secondary School[span_101](start_span)[span_101](end_span)</div>
+          <p>72.2%[span_102](start_span)[span_102](end_span)</p>
         </div>
       </div>
     </div>
@@ -486,27 +761,27 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="certifications">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">04 — CREDENTIALS</div><h2>Certifications.</h2></div>
-      <p>Specialized vocational training in taxation, banking, and practical compliance.</p>
+      <div><div class="kicker">04 — CREDENTIALS[span_103](start_span)[span_103](end_span)</div><h2>Certifications.</h2></div>
+      <p>Specialized vocational training in taxation, banking, and practical compliance[span_104](start_span)[span_104](end_span).</p>
     </div>
     <div class="cert-grid">
       <div class="cert-card">
-        <div class="cert-date">September 2026</div>
-        <h3>Finacle & Advanced Banking Program</h3>
-        <div class="cert-org">Daksha Skilling Academy LLP</div>
-        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Training in core banking software navigation, teller transactions, and advanced financial operations.</p>
+        <div class="cert-date">September 2026[span_105](start_span)[span_105](end_span)</div>
+        <h3>Finacle & Advanced Banking Program[span_106](start_span)[span_106](end_span)</h3>
+        <div class="cert-org">Daksha Skilling Academy LLP[span_107](start_span)[span_107](end_span)</div>
+        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Training in core banking software navigation, teller transactions, and advanced financial operations[span_108](start_span)[span_108](end_span).</p>
       </div>
       <div class="cert-card">
-        <div class="cert-date">December 2022</div>
-        <h3>Income Tax Practitioner</h3>
-        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)</div>
-        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Practical computation of income tax, assessment guidelines, deduction provisions, and e-filing frameworks.</p>
+        <div class="cert-date">December 2022[span_109](start_span)[span_109](end_span)</div>
+        <h3>Income Tax Practitioner[span_110](start_span)[span_110](end_span)</h3>
+        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)[span_111](start_span)[span_111](end_span)</div>
+        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Practical computation of income tax, assessment guidelines, deduction provisions, and e-filing frameworks[span_112](start_span)[span_112](end_span).</p>
       </div>
       <div class="cert-card">
-        <div class="cert-date">May 2022</div>
-        <h3>GST — Basic Level Training</h3>
-        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)</div>
-        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Foundational concepts of Goods and Services Tax, invoice generation, tax slabs, and return structures.</p>
+        <div class="cert-date">May 2022[span_113](start_span)[span_113](end_span)</div>
+        <h3>GST — Basic Level Training[span_114](start_span)[span_114](end_span)</h3>
+        <div class="cert-org">MSME - Technology Development Centre, Chennai (CFTI)[span_115](start_span)[span_115](end_span)</div>
+        <p style="font-size:12px;color:#9AA5B3;line-height:1.6;margin-top:10px;">Foundational concepts of Goods and Services Tax, invoice generation, tax slabs, and return structures[span_116](start_span)[span_116](end_span).</p>
       </div>
     </div>
   </div>
@@ -516,30 +791,30 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="experience">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">05 — EXPOSURE</div><h2>Experience & Leadership.</h2></div>
-      <p>Event leadership and industrial exposure reports documented in date sequence.</p>
+      <div><div class="kicker">05 — EXPOSURE[span_117](start_span)[span_117](end_span)</div><h2>Experience & Leadership.</h2></div>
+      <p>Event leadership and industrial exposure reports documented in date sequence[span_118](start_span)[span_118](end_span)[span_119](start_span)[span_119](end_span).</p>
     </div>
     <div class="timeline">
       <div class="time-item">
-        <div class="time-date">March 2026</div>
+        <div class="time-date">March 2026[span_120](start_span)[span_120](end_span)[span_121](start_span)[span_121](end_span)</div>
         <div>
-          <h3>Industrial Study — Uravu Science & Technology Study Centre, Wayanad</h3>
-          <p>Studied sustainable bamboo manufacturing and rural entrepreneurship models; prepared an analytical industrial study report.</p>
+          <h3>Industrial Study — Uravu Science & Technology Study Centre, Wayanad[span_122](start_span)[span_122](end_span)[span_123](start_span)[span_123](end_span)</h3>
+          <p>Studied sustainable bamboo manufacturing and rural entrepreneurship models; prepared an analytical industrial study report[span_124](start_span)[span_124](end_span)[span_125](start_span)[span_125](end_span).</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">October 2025</div>
+        <div class="time-date">October 2025[span_126](start_span)[span_126](end_span)[span_127](start_span)[span_127](end_span)</div>
         <div>
-          <h3>Event Head — Business Proposal Competition, FinFest 2025</h3>
-          <div class="sub">P.G. Department of Accounting & Finance</div>
-          <p>Led planning and execution of the competition, coordinating participants, judges and logistics, and managing scheduling and participant engagement end to end.</p>
+          <h3>Event Head — Business Proposal Competition, FinFest 2025[span_128](start_span)[span_128](end_span)[span_129](start_span)[span_129](end_span)</h3>
+          <div class="sub">P.G. Department of Accounting & Finance[span_130](start_span)[span_130](end_span)</div>
+          <p>Led planning and execution of the competition, coordinating participants, judges and logistics, and managing scheduling and participant engagement end to end[span_131](start_span)[span_131](end_span).</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">October 2025</div>
+        <div class="time-date">October 2025[span_132](start_span)[span_132](end_span)[span_133](start_span)[span_133](end_span)</div>
         <div>
-          <h3>Industrial Visit — Chennai Port, Chennai</h3>
-          <p>Gained exposure to port operations, logistics, cargo handling and supply chain management; prepared an analytical report.</p>
+          <h3>Industrial Visit — Chennai Port, Chennai[span_134](start_span)[span_134](end_span)[span_135](start_span)[span_135](end_span)</h3>
+          <p>Gained exposure to port operations, logistics, cargo handling and supply chain management; prepared an analytical report[span_136](start_span)[span_136](end_span).</p>
         </div>
       </div>
     </div>
@@ -550,31 +825,31 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="research">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">06 — SCHOLARSHIP</div><h2>Research & Publications.</h2></div>
-      <p>Academic research capstones and published international conference proceedings.</p>
+      <div><div class="kicker">06 — SCHOLARSHIP[span_137](start_span)[span_137](end_span)</div><h2>Research & Publications.[span_138](start_span)[span_138](end_span)</h2></div>
+      <p>Academic research capstones and published international conference proceedings[span_139](start_span)[span_139](end_span).</p>
     </div>
     <div class="timeline">
       <div class="time-item">
-        <div class="time-date">February 2026</div>
+        <div class="time-date">February 2026[span_140](start_span)[span_140](end_span)</div>
         <div>
-          <h3>Published Article: Impact of AI-Enabled Services in SBI YONO</h3>
-          <div class="sub">International Conference at P.T. Lee Chengalvaraya Naicker College (Presented 06-02-2026; Published in Proceedings)</div>
-          <p>"A Study on the Impact of AI-Enabled Services in SBI YONO on Accounting Accuracy and Compliance Efficiency with Reference to Rural Users."</p>
-          <p style="margin-top:6px;">Primary survey study; found no statistically significant link between awareness of AI features and perceived accuracy or compliance efficiency, highlighting the need for greater digital literacy and infrastructure.</p>
+          <h3>Published Article: Impact of AI-Enabled Services in SBI YONO[span_141](start_span)[span_141](end_span)</h3>
+          <div class="sub">International Conference at P.T. Lee Chengalvaraya Naicker College (Presented 06-02-2026; Published in Proceedings)[span_142](start_span)[span_142](end_span)</div>
+          <p>"A Study on the Impact of AI-Enabled Services in SBI YONO on Accounting Accuracy and Compliance Efficiency with Reference to Rural Users.[span_143](start_span)"[span_143](end_span)</p>
+          <p style="margin-top:6px;">Primary survey study; found no statistically significant link between awareness of AI features and perceived accuracy or compliance efficiency, highlighting the need for greater digital literacy and infrastructure[span_144](start_span)[span_144](end_span).</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">April 2023</div>
+        <div class="time-date">April 2023[span_145](start_span)[span_145](end_span)</div>
         <div>
-          <h3>A Study on Ratio Analysis Between Tata Steel Ltd and JSW Steel Ltd — UG Project</h3>
-          <p>Compared two listed steel companies using liquidity, profitability, solvency and efficiency ratios from published annual reports; interpreted results to assess operational efficiency and financial health.</p>
+          <h3>A Study on Ratio Analysis Between Tata Steel Ltd and JSW Steel Ltd — UG Project[span_146](start_span)[span_146](end_span)</h3>
+          <p>Compared two listed steel companies using liquidity, profitability, solvency and efficiency ratios from published annual reports; interpreted results to assess operational efficiency and financial health[span_147](start_span)[span_147](end_span).</p>
         </div>
       </div>
       <div class="time-item">
-        <div class="time-date">March 2021</div>
+        <div class="time-date">March 2021[span_148](start_span)[span_148](end_span)[span_149](start_span)[span_149](end_span)</div>
         <div>
-          <h3>A Study on Negative Traits — UG Project</h3>
-          <p>Studied negative affectivity and emotional intelligence among peers through a structured survey covering personal traits, anger management, and attitude. Found most respondents identified as emotional or lonely, with the majority agreeing anger is a normal emotion and viewing attitude positively.</p>
+          <h3>A Study on Negative Traits — UG Project[span_150](start_span)[span_150](end_span)[span_151](start_span)[span_151](end_span)</h3>
+          <p>Studied negative affectivity and emotional intelligence among peers through a structured survey covering personal traits, anger management, and attitude[span_152](start_span)[span_152](end_span)[span_153](start_span)[span_153](end_span). Found most respondents identified as emotional or lonely, with the majority agreeing anger is a normal emotion and viewing attitude positively[span_154](start_span)[span_154](end_span)[span_155](start_span)[span_155](end_span).</p>
         </div>
       </div>
     </div>
@@ -585,8 +860,8 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="websites-and-web-apps">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">07 — DIGITAL CREATIONS</div><h2>Websites & Web Applications I've Built.</h2></div>
-      <p>Digital experiences and practical tools I've developed using AI-assisted workflows and digital technologies.</p>
+      <div><div class="kicker">07 — DIGITAL CREATIONS[span_156](start_span)[span_156](end_span)</div><h2>Websites & Web Applications I've Built.[span_157](start_span)[span_157](end_span)</h2></div>
+      <p>Digital experiences and practical tools I've developed using AI-assisted workflows and digital technologies[span_158](start_span)[span_158](end_span).</p>
     </div>
 
     <div class="projects">
@@ -772,7 +1047,7 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
             <span class="visual-label">SPORTS SCORER · FIXTURE CALCULATOR</span>
           </div>
           <div class="mock-window">
-            <div style="padding:16px;background:linear-gradient(135deg,#16212D,#0A0F16);height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;">
+            <div style="padding:16px;background:linear-gradient(135deg, #16212D, #0A0F16);height:100%;display:flex;flex-direction:column;justify-content:center;align-items:center;">
               <div class="visual-label" style="color:var(--site-primary)">LIVE MATCH SCOREBOARD</div>
               <div class="cricket-score" id="cricketScoreBoard" style="font-size:22px;margin-top:10px;font-family:monospace;font-weight:800;">142/3 (14.2)</div>
             </div>
@@ -801,19 +1076,19 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <section id="interests">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="kicker">08 — PURSUITS</div><h2>Personal Interests.</h2></div>
-      <p>Independent areas of continuous personal curiosity and macroeconomic observation.</p>
+      <div><div class="kicker">08 — PURSUITS[span_159](start_span)[span_159](end_span)</div><h2>Personal Interests.</h2></div>
+      <p>Independent areas of continuous personal curiosity and macroeconomic observation[span_160](start_span)[span_160](end_span).</p>
     </div>
     <div class="interests-grid">
       <div class="interest-card">
-        <div class="kicker">CAPITAL MARKETS</div>
-        <h3>Stock Market Investing</h3>
-        <p>Active personal interest in capital market dynamics across equities, systematic investment plans (SIPs), and derivative options trading strategies. Studied from an analytical perspective to observe market sentiment and valuation fundamentals.</p>
+        <div class="kicker">CAPITAL MARKETS[span_161](start_span)[span_161](end_span)</div>
+        <h3>Stock Market Investing[span_162](start_span)[span_162](end_span)</h3>
+        <p>Active personal interest in capital market dynamics across equities, systematic investment plans (SIPs), and derivative options trading strategies[span_163](start_span)[span_163](end_span). Studied from an analytical perspective to observe market sentiment and valuation fundamentals[span_164](start_span)[span_164](end_span).</p>
       </div>
       <div class="interest-card">
-        <div class="kicker">GLOBAL STRATEGY</div>
-        <h3>Geopolitics</h3>
-        <p>Keen observer of international political economy, cross-border trade agreements, bilateral supply chain shifts, and their macroeconomic impacts on currency rates, inflation, and global trade flows.</p>
+        <div class="kicker">GLOBAL STRATEGY[span_165](start_span)[span_165](end_span)</div>
+        <h3>Geopolitics[span_166](start_span)[span_166](end_span)</h3>
+        <p>Keen observer of international political economy, cross-border trade agreements, bilateral supply chain shifts, and their macroeconomic impacts on currency rates, inflation, and global trade flows[span_167](start_span)[span_167](end_span).</p>
       </div>
     </div>
   </div>
@@ -824,14 +1099,14 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
   <div class="wrap">
     <div class="contact-panel">
       <div>
-        <div class="eyebrow"><span class="pulse"></span> 09 — CONNECT</div>
+        <div class="eyebrow"><span class="pulse"></span> 09 — CONNECT[span_168](start_span)[span_168](end_span)</div>
         <h2>Let's talk finance<br>and execution.</h2>
-        <p>Available for corporate finance, accounting operations, analytical roles, or project discussions. Reach out directly using the details below.</p>
-        <div class="contact-note">Kadambathur - 631203, Tiruvallur District, Tamil Nadu · +91 8610054558</div>
+        <p>Available for corporate finance, accounting operations, analytical roles, or project discussions[span_169](start_span)[span_169](end_span). Reach out directly using the details below[span_170](start_span)[span_170](end_span).</p>
+        <div class="contact-note">Kadambathur - 631203, Tiruvallur District, Tamil Nadu[span_171](start_span)[span_171](end_span) · +91 8610054558[span_172](start_span)[span_172](end_span)</div>
       </div>
       <div class="contact-buttons">
         <a class="btn primary email-trigger" href="https://mail.google.com/mail/?view=cm&fs=1&to=akashgokul06@gmail.com&su=Portfolio%20Inquiry" target="_blank" rel="noreferrer">Email Me ↗</a>
-        <a class="btn" href="https://linkedin.com/in/akash-gokulakrishnan-ab34511bb" target="_blank" rel="noreferrer">LinkedIn Profile ↗</a>
+        <a class="btn" href="https://linkedin.com/in/akash-gokulakrishnan-ab34511bb" target="_blank" rel="noreferrer">LinkedIn Profile ↗[span_173](start_span)[span_173](end_span)</a>
         <a class="btn" href="tel:+918610054558">Call Me (+91 8610054558)</a>
       </div>
     </div>
@@ -840,8 +1115,8 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 </main>
 
 <footer class="wrap">
-  <span>© <span id="year"></span> Akash Gokulakrishnan</span>
-  <span>Structured Portfolio: About → Skills → Education → Certifications → Experience → Research → Websites & Apps → Interests → Contact</span>
+  <span>© <span id="year"></span> Akash Gokulakrishnan[span_174](start_span)[span_174](end_span)</span>
+  <span>Structured Portfolio: About → Skills → Education → Certifications → Experience → Research → Websites & Apps → Interests → Contact[span_175](start_span)[span_175](end_span)</span>
   <span><a href="#home">Back to top ↑</a></span>
 </footer>
 
@@ -894,7 +1169,7 @@ footer{padding:25px 0 36px;display:flex;justify-content:space-between;gap:15px;c
 <div class="utility-dock">
   <button class="utility-button" id="soundToggle">🔊 Audio: On</button>
   <button class="utility-button" id="themeCycleBtn">◉ Theme Cycle</button>
-  <button class="utility-button" id="openPalette">⌘K · Menu</button>
+  <button class="utility-button" id="openPalette">⌘K · Menu[span_176](start_span)[span_176](end_span)</button>
 </div>
 
 <canvas id="motionCanvas"></canvas>
@@ -1168,7 +1443,7 @@ document.getElementById('btnWkt').addEventListener('click', () => {
   addScore(15);
 });
 
-/* 8. CANVAS GRAVITATIONAL PARTICLES */
+/* 8. CANVAS PARTICLES */
 const canvas = document.getElementById('motionCanvas');
 const ctx = canvas.getContext('2d');
 let w, h, points = [], mouse = { x: -1000, y: -1000 };
@@ -1259,7 +1534,7 @@ function stepMarquee() {
 }
 stepMarquee();
 
-/* 10. FINFEST CRISIS MODAL DECISION SIM */
+/* 10. FINFEST CRISIS MODAL SIM */
 const crisisModal = document.getElementById('crisisModal');
 document.getElementById('openCrisisBtn').addEventListener('click', () => {
   crisisModal.showModal();
@@ -1290,25 +1565,40 @@ const themes = [
   { name: 'VIOLET (#B7A1FF)', color: '#B7A1FF', dark: '#0D0A16' },
   { name: 'CORAL (#FFB19E)', color: '#FFB19E', dark: '#160D0C' }
 ];
-let themeIdx = 0;
-document.getElementById('themeCycleBtn').addEventListener('click', () => {
-  themeIdx = (themeIdx + 1) % themes.length;
-  const t = themes[themeIdx];
-  document.documentElement.style.setProperty('--site-primary', t.color);
-  document.documentElement.style.setProperty('--site-background', t.dark);
-  document.getElementById('hudAccent').textContent = t.name;
-  playTone(550, 'sine', 0.07, 0.05);
-  addScore(15);
-});
 
-/* 12. COMMAND PALETTE (CMD+K NAVIGATION) */
+let themeIdx = 0;
+const themeBtn = document.getElementById('themeCycleBtn');
+const hudAccent = document.getElementById('hudAccent');
+
+if (themeBtn) {
+  themeBtn.addEventListener('click', () => {
+    themeIdx = (themeIdx + 1) % themes.length;
+    const currentTheme = themes[themeIdx];
+
+    document.documentElement.style.setProperty('--site-primary', currentTheme.color);
+    document.documentElement.style.setProperty('--site-background', currentTheme.dark);
+    document.body.style.backgroundColor = currentTheme.dark;
+
+    if (hudAccent) {
+      hudAccent.textContent = currentTheme.name;
+      hudAccent.style.color = currentTheme.color;
+    }
+
+    playTone(550, 'sine', 0.07, 0.05);
+    addScore(15);
+  });
+}
+
+/* 12. COMMAND PALETTE (CMD+K & BUTTON TRIGGER) */
 const palette = document.getElementById('commandPalette');
+const openPaletteBtn = document.getElementById('openPalette');
+const closePaletteBtn = document.getElementById('closePalette');
 const paletteSearch = document.getElementById('paletteSearch');
 const paletteResults = document.getElementById('paletteResults');
 
 const destinations = [
   { label: '01. About Me', target: '#about', desc: 'Background & Metrics' },
-  { label: '02. Skills', target: '#skills', desc: 'Accounting & Tools' },
+  { label: '02. Skills', target: '#skills', desc: 'Excel, Tally & Tools' },
   { label: '03. Education & Qualifications', target: '#education', desc: 'M.Com, CMA Inter, B.Com' },
   { label: '04. Certifications', target: '#certifications', desc: 'GST, Income Tax, Finacle' },
   { label: '05. Experience & Leadership', target: '#experience', desc: 'FinFest 2025 & Port Study' },
@@ -1319,37 +1609,99 @@ const destinations = [
 ];
 
 function renderPalette(filter = '') {
+  if (!paletteResults) return;
   paletteResults.innerHTML = '';
-  const filtered = destinations.filter(d => d.label.toLowerCase().includes(filter.toLowerCase()) || d.desc.toLowerCase().includes(filter.toLowerCase()));
+  const query = filter.toLowerCase().trim();
+  const filtered = destinations.filter(d => 
+    d.label.toLowerCase().includes(query) || d.desc.toLowerCase().includes(query)
+  );
+
   filtered.forEach(d => {
     const btn = document.createElement('button');
+    btn.type = 'button';
     btn.className = 'palette-result';
     btn.innerHTML = `<span><strong>${d.label}</strong></span><span style="font-size:11px;color:#8E9AAA">${d.desc}</span>`;
     btn.onclick = () => {
       palette.close();
-      document.querySelector(d.target).scrollIntoView({ behavior: 'smooth' });
+      const el = document.querySelector(d.target);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
     };
     paletteResults.appendChild(btn);
   });
 }
-renderPalette();
 
-paletteSearch.addEventListener('input', (e) => renderPalette(e.target.value));
-document.getElementById('openPalette').addEventListener('click', () => { palette.showModal(); renderPalette(); });
-document.getElementById('closePalette').addEventListener('click', () => palette.close());
+function showPalette() {
+  if (!palette) return;
+  renderPalette();
+  if (typeof palette.showModal === 'function') {
+    palette.showModal();
+  } else {
+    palette.setAttribute('open', '');
+  }
+  if (paletteSearch) {
+    paletteSearch.value = '';
+    setTimeout(() => paletteSearch.focus(), 50);
+  }
+  playTone(580, 'sine', 0.08, 0.04);
+}
+
+function hidePalette() {
+  if (!palette) return;
+  if (typeof palette.close === 'function') {
+    palette.close();
+  } else {
+    palette.removeAttribute('open');
+  }
+}
+
+if (openPaletteBtn) openPaletteBtn.addEventListener('click', showPalette);
+if (closePaletteBtn) closePaletteBtn.addEventListener('click', hidePalette);
+
+if (paletteSearch) {
+  paletteSearch.addEventListener('input', (e) => renderPalette(e.target.value));
+}
+
+if (palette) {
+  palette.addEventListener('click', (e) => {
+    const rect = palette.getBoundingClientRect();
+    const isInDialog = (
+      rect.top <= e.clientY && e.clientY <= rect.top + rect.height &&
+      rect.left <= e.clientX && e.clientX <= rect.left + rect.width
+    );
+    if (!isInDialog) hidePalette();
+  });
+}
+
 window.addEventListener('keydown', (e) => {
   if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
     e.preventDefault();
-    palette.open ? palette.close() : palette.showModal();
-    renderPalette();
+    (palette && palette.open) ? hidePalette() : showPalette();
   }
 });
 
 /* 13. RESPONSIVE MOBILE MENU */
 const menuBtn = document.getElementById('menu');
 const navMenu = document.getElementById('nav');
-menuBtn.addEventListener('click', () => navMenu.classList.toggle('open'));
-navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+
+if (menuBtn && navMenu) {
+  menuBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navMenu.classList.toggle('open');
+    playTone(520, 'sine', 0.08, 0.04);
+  });
+
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+    });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && e.target !== menuBtn) {
+      navMenu.classList.remove('open');
+    }
+  });
+}
 
 /* 14. UNIVERSAL DIRECT GMAIL REDIRECT (PC & MOBILE) */
 document.querySelectorAll('.email-trigger').forEach(btn => {
@@ -1362,14 +1714,11 @@ document.querySelectorAll('.email-trigger').forEach(btn => {
     const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
     
     if (isMobile) {
-      // In mobile, try opening the Gmail web interface in a new tab first
       const opened = window.open(gmailWebComposeUrl, '_blank');
-      // If popup blocker stops it or app fails, fall back to mailto intent
       if (!opened || opened.closed || typeof opened.closed === 'undefined') {
         window.location.href = `mailto:${targetEmail}?subject=${subject}`;
       }
     } else {
-      // In Desktop PC, open Gmail Web directly with recipient pre-filled
       window.open(gmailWebComposeUrl, '_blank', 'noopener,noreferrer');
     }
   });
@@ -1379,3 +1728,4 @@ document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>
+
